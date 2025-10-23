@@ -88,7 +88,7 @@ const Phase1Container = styled.div`
 `;
 
 const SmallText = styled.div`
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 35px;
   font-weight: 400;
   color: ${colors.white};
