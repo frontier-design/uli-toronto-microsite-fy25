@@ -634,6 +634,15 @@ const Phase6Container = styled.div`
   align-items: center;
   justify-content: center;
   transform: translateY(100vh);
+  
+  /* Debug: Add a subtle border to see the container */
+  /* border: 2px solid red; */
+  
+  /* Debug: Make LogoContainer visible for testing */
+  /* & > div[ref="logoContainerRef"] {
+    opacity: 1 !important;
+    border: 2px solid blue !important;
+  } */
 `;
 
 const Phase6BackgroundImage = styled.div`
@@ -693,15 +702,18 @@ const Phase6TopText = styled.div`
 `;
 
 const LogoContainer = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  align-items: center;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   gap: 20px;
   opacity: 0;
   z-index: 3;
+  width: auto;
+  height: auto;
   
   img {
     height: 200px;
@@ -744,11 +756,22 @@ const LogoContainer = styled.div`
 `;
 
 const Phase6WordsWrapper = styled.div`
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  flex-wrap: nowrap;
+  gap: 20px;
+  
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  @media (max-width: 768px) {
+    gap: 10px;
+  }
 `;
 
 const Phase6Word = styled.div`
