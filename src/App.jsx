@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { GlobalStyle, GridOverlay, GridToggleButton, colors } from './styles';
 import { Navigation, LandingMoment, Narrative, Messages, MainContent, DynamicData, SectionDivider, Membership, ClosingReflections, Footer } from './components';
 function App() {
@@ -40,6 +41,7 @@ function App() {
        <ClosingReflections />
       <Membership />
       <Footer />
+      <Analytics />
     </>
   );
 }
