@@ -1617,7 +1617,7 @@ const Narrative = () => {
                 playsInline
                 controls={false}
               >
-                <source src="/videos/narrative-video.mp4" type="video/mp4" />
+                <source src={torontoVid} type="video/mp4" />
                 Your browser does not support the video tag.
               </Phase5Video>
             </Phase5VideoContainer>
