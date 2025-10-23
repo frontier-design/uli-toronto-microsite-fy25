@@ -1,12 +1,14 @@
 # Large video files that should not be deployed
 public/images/narrative-video.mp4
 public/videos/narrative-video.mp4
-src/assets/videos/torontoVid.mov
+
+# Build artifacts
+dist/
+node_modules/
 
 # Backup files
 backup/
 
 # Development files
-node_modules/
 .git/
 .vercel/
