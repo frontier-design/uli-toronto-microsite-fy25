@@ -1,0 +1,30 @@
+{
+  "leaders": [
+    {
+      "role": "Chair",
+      "name": "Salima Rawji",
+      "image": "/images/photos/salima.jpg"
+    },
+    {
+      "role": "Vice Chair",
+      "name": "Tobias Oriwol",
+      "image": "https://netforum.imgix.net/1144816.jpg?crop=faces&w=550&h=650&fit=crop&v=1759756635"
+    },
+    {
+      "role": "Treasurer",
+      "name": "Ali Abbas",
+      "image": "https://netforum.imgix.net/996844.jpg?crop=faces&w=550&h=650&fit=crop&v=1659959114"
+    }
+  ],
+  "links": [
+    {
+      "text": "See our Advisory Board",
+      "url": "https://toronto.uli.org/about/our-leaders/advisory-board/"
+    },
+    {
+      "text": "See our Management Committee",
+      "url": "https://toronto.uli.org/about/our-leaders/management-committee/"
+    }
+  ]
+}
+

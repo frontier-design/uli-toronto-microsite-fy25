@@ -1,0 +1,30 @@
+{
+  "revenue": [
+    { "label": "Registration Fees", "amount": 415986 },
+    { "label": "Membership Dues Transfer", "amount": 155810 },
+    { "label": "Sponsorship Revenue", "amount": 1126143 },
+    { "label": "Other", "amount": 2114 },
+    { "label": "Grant", "amount": 1138 },
+    { "label": "Contract", "amount": 23490 }
+  ],
+  "totalRevenue": 1724680,
+  "expenses": [
+    { "label": "Salaries and Fringe", "amount": 649520 },
+    { "label": "Travel", "amount": 35754 },
+    { "label": "Contracted Personal Service", "amount": 148014 },
+    { "label": "Meetings", "amount": 362207 },
+    { "label": "Telephone", "amount": 7921 },
+    { "label": "Postage & Printing", "amount": 14838 },
+    { "label": "Office Supplies", "amount": 5330 },
+    { "label": "Rent", "amount": 54816 },
+    { "label": "Sponsor Recognition & Awards", "amount": 44207 },
+    { "label": "Miscellaneous", "amount": -8168 },
+    { "label": "Investment Allocation", "amount": 170559 }
+  ],
+  "totalExpenses": 1484998,
+  "highlights": {
+    "totalRevenue": 1724680,
+    "totalExpenses": 1484998,
+    "totalReserves": 239682
+  }
+}

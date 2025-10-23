@@ -1,0 +1,36 @@
+{
+  "membersBySector": [
+    { "label": "Development", "value": 21, "color": "#4C763B" },
+    { "label": "Financial", "value": 14, "color": "#6A9551" },
+    { "label": "Urban Planner", "value": 13, "color": "#7FAE67" },
+    { "label": "Academic", "value": 11, "color": "#8EC27D" },
+    { "label": "Architecture and Design", "value": 10, "color": "#2C4D7F" },
+    { "label": "Consultant", "value": 7, "color": "#3D5A9E" },
+    { "label": "Other", "value": 5, "color": "#4A6BA8" },
+    { "label": "Government", "value": 5, "color": "#5A81C5" },
+    { "label": "Communications Professionals", "value": 4, "color": "#6888B8" },
+    { "label": "Law Firm", "value": 3, "color": "#595177" },
+    { "label": "Corporate Executive", "value": 3, "color": "#726A8E" },
+    { "label": "Engineering", "value": 2, "color": "#8B84A5" },
+    { "label": "Not for Profit", "value": 1, "color": "#A59DBC" }
+  ],
+  "membershipTypes": {
+    "total": 2119,
+    "breakdown": [
+      { "name": "Private", "value": 50 },
+      { "name": "Under 35", "value": 19 },
+      { "name": "Public", "value": 15 },
+      { "name": "Student", "value": 8 },
+      { "name": "Full Public", "value": 5 },
+      { "name": "Full Retired", "value": 2 },
+      { "name": "Full Under 35", "value": 1 }
+    ]
+  },
+  "eventAttendance": [
+    { "council": "Toronto", "attendance": 9382 },
+    { "council": "Austin", "attendance": 5452 },
+    { "council": "Nashville", "attendance": 5428 },
+    { "council": "San Francisco", "attendance": 4967 },
+    { "council": "Philadelphia", "attendance": 4047 }
+  ]
+}

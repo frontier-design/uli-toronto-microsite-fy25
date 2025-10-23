@@ -1,0 +1,30 @@
+{
+  "sponsors": [
+    {
+      "name": "Diamond Sponsor 1",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Arcadis_logo.svg/2560px-Arcadis_logo.svg.png",
+      "website": "https://www.arcadis.com/"
+    },
+    {
+      "name": "Diamond Sponsor 2",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/9/95/BDPQuadrangle-Logo-RGB-Black.png",
+      "website": "https://www.bdpquadrangle.com/"
+    },
+    {
+      "name": "Diamond Sponsor 3",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/EllisDon_Logo.svg/2560px-EllisDon_Logo.svg.png",
+      "website": "https://www.ellisdon.com/"
+    },
+    {
+      "name": "Diamond Sponsor 4",
+      "logo": "https://workable-application-form.s3.amazonaws.com/advanced/production/602fa36f3e0ec0b348d6a129/eb958b14-0689-9fe8-8360-d893ed090f50",
+      "website": "#"
+    },
+    {
+      "name": "Diamond Sponsor 5",
+      "logo": "https://companieslogo.com/img/orig/TCN_BIG-4bc351b7.png?t=1720244494",
+      "website": "https://www.tricon.ca/"
+    }
+  ]
+}
+

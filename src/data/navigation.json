@@ -1,0 +1,55 @@
+{
+  "navigationItems": [
+    {
+      "id": "landing",
+      "label": "Introduction",
+      "subItems": []
+    },
+    {
+      "id": "messages",
+      "label": "Leadership Messages",
+      "subItems": []
+    },
+    {
+      "id": "stories",
+      "label": "Top Stories From 2025",
+      "subItems": []
+    },
+    {
+      "id": "at-a-glance",
+      "label": "Year at a Glance",
+      "subItems": [
+        {
+          "id": "at-a-glance-overview",
+          "label": "People & Partners"
+        },
+        {
+          "id": "at-a-glance-financial-snapshot",
+          "label": "FY25 Financial Snapshot"
+        },
+        {
+          "id": "at-a-glance-district-council",
+          "label": "District Council"
+        },
+        {
+          "id": "at-a-glance-leadership",
+          "label": "FY25 Leadership"
+        },
+        {
+          "id": "at-a-glance-sponsorship",
+          "label": "Sponsorship"
+        }
+      ]
+    },
+    {
+      "id": "closing-reflections",
+      "label": "Closing Reflections",
+      "subItems": []
+    },
+    {
+      "id": "membership",
+      "label": "Membership",
+      "subItems": []
+    }
+  ]
+}

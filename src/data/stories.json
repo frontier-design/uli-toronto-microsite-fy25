@@ -1,0 +1,345 @@
+{
+  "stories": [
+    {
+      "id": "public-sector-convening",
+      "title": "Public-Sector Convening",
+      "image": "/images/photos/public-sector.jpeg",
+      "content": "ULI Toronto strengthened its role as a trusted convener of public and private sector leaders in FY25, expanding on over a decade of success with our flagship Meet the Chief Planners Dinner—now drawing over 500 attendees and 50 senior public officials. This commitment deepened with the launch of our Members-Only Public Sector Breakfast Series, a new monthly forum that brought ULI members together with influential civic leaders for candid dialogue on key urban issues. We also hosted two exclusive roundtables with the City of Toronto, reinforcing our role as a neutral platform for informed, solutions-focused exchange ",
+      "images": [
+        {
+          "src": "/images/photos/public-sector.jpeg",
+          "alt": "Public Sector Convening",
+          "caption": null,
+          "position": "after"
+        }
+      ],
+      "interactiveText": [
+        {
+          "highlightedText": "Meet the Chief Planners Dinner",
+          "hoverImage": "/images/meetChiefPlanners.png",
+          "hoverImageCaption": "Annual networking dinner bringing together public and private sector leaders",
+          "pdfLink": "https://ulidigitalmarketing.blob.core.windows.net/ulidcnc/sites/14/2025/03/4768_ULI_FINAL-ULI25-Meet-the-Chief-Planner-Program_PR.pdf",
+          "dynamicDataTitle": "11th Annual Meet the Chief Planners Dinner"
+        },
+        {
+          "highlightedText": "Public Sector Breakfast Series",
+          "hoverImage": null,
+          "hoverImageCaption": null,
+          "pdfLink": "https://www.instagram.com/p/DOq4KIcjSyG/"
+        },
+        {
+          "highlightedText": "two exclusive roundtables",
+          "hoverImage": null,
+          "hoverImageCaption": null,
+          "pdfLink": null
+        }
+      ]
+    },
+    {
+      "id": "critical-industry-insights",
+      "title": "Critical Industry Insights",
+      "image": "critical-industry-insights.jpg",
+      "content": "In a year of economic uncertainty, policy shifts, senior order elections, and geopolitical disruption, ULI Toronto provided a trusted platform for critical industry dialogue. Through timely programs on AI, housing affordability, climate action, and reconciliation, we offered insights that helped members navigate complexity and lead with confidence. From decoding Bill 17 to advancing inclusive design, our initiatives reflected a commitment to thought leadership and collaboration. By convening public and private sector voices, we enabled forward-thinking conversations that shaped the region's real estate landscape—and reinforced ULI Toronto's role as a catalyst for meaningful, mission-aligned solutions in a rapidly changing environment.",
+      "pullQuote": "By convening public and private sector voices, <span style=\"color: #4C763B; background-color: #d7f0c7; padding: 2px 8px;\">ULI enabled forward-thinking conversations</span> that shaped the region's real estate landscape",
+      "images": [
+        {
+          "src": "/images/landing-stacking-cards/stack-4.jpeg",
+          "alt": "Critical Industry Insights",
+          "caption": null,
+          "position": "after"
+        }
+      ]
+    },
+    {
+      "id": "esg-dei-reconciliation",
+      "title": "ESG, DEI & Reconciliation",
+      "image": "esg-dei-reconciliation.jpg",
+      "content": "Our commitment to environmental, social, and governance principles drives everything we do. We champion diversity, equity, and inclusion initiatives that create more representative leadership across the industry. Through meaningful reconciliation efforts, our Pathways to Inclusion program, and our award-winning Truth & Reconciliation Guide—Answering the Call to Action 92, we work to build respectful partnerships with Indigenous communities, ensuring that development projects honor traditional territories and create shared economic opportunities for all.",
+      "images": [
+        {
+          "src": "https://ulidigitalmarketing.blob.core.windows.net/ulidcnc/sites/14/2020/11/AB6A7198-780x400.jpg",
+          "alt": "ESG, DEI & Reconciliation",
+          "caption": null,
+          "position": "after"
+        }
+      ],
+      "interactiveText": [
+        {
+          "highlightedText": "Pathways to Inclusion",
+          "hoverImage": null,
+          "hoverImageCaption": null,
+          "pdfLink": "https://toronto.uli.org/getinvolved/pathways-to-inclusion/pathways-to-inclusion-2025/"
+        },
+        {
+          "highlightedText": "award-winning Truth & Reconciliation Guide—Answering the Call to Action 92",
+          "hoverImage": "/images/answeringTheCall.png",
+          "hoverImageCaption": "ULI Toronto's comprehensive guide for Truth and Reconciliation in real estate development",
+          "pdfLink": "https://ulidigitalmarketing.blob.core.windows.net/ulidcnc/sites/14/2025/06/compressed_ULI-Toronto_-Answering-the-Call-to-Action-92-A-guide-for-Truth-and-Reconciliation-in-Corporate-Responsibility-and-Land-Development_compressed.pdf",
+          "dynamicDataTitle": "Truth & Reconciliation Guide - Answering the Call to Action 92"
+        }
+      ]
+    },
+    {
+      "id": "housing-affordability",
+      "title": "Housing Affordability",
+      "image": "housing-affordability.jpg",
+      "content": "In FY25, ULI Toronto deepened its focus on housing affordability through dynamic programming and cross-sector  engagement. During National Housing Week, we hosted a five-part webinar series on topics from asylum seeker housing to innovative financing, capped by a Housing Dinner at EY Canada. Additional webinars explored mid-rise opportunities, rental market strategies, and development incentives. We also convened a VIP session with Toronto Mayor Olivia Chow on the City's new rental policy. Through these initiatives—and the Curtner Urban Leadership Program's focus on housing innovation—we advanced informed, forward-looking solutions to one of our region's most pressing challenges.",
+      "interactiveText": [
+        {
+          "highlightedText": "National Housing Week",
+          "hoverImage": null,
+          "hoverImageCaption": null,
+          "pdfLink": "https://toronto.uli.org/events/national-housing-week-past/"
+        },
+        {
+          "highlightedText": "a five-part webinar series",
+          "hoverImage": null,
+          "hoverImageCaption": null,
+          "pdfLink": null,
+          "scrollToVideo": true
+        },
+        {
+          "highlightedText": "VIP session with Toronto Mayor Olivia Chow",
+          "hoverImage": "/images/oliviaChow.jpg",
+          "hoverImageCaption": "Toronto Mayor Olivia Chow",
+          "pdfLink": "https://toronto.uli.org/events/national-housing-week-past/national-housing-week-2024/",
+          "dynamicDataTitle": "Mayor Olivia Chow VIP Session - National Housing Week"
+        }
+      ],
+      "videoGallery": {
+        "title": "National Housing Week: Broadening the Affordable Housing Discussion",
+        "description": "Are current affordable housing supply policies, primarily focused on increased zoning, accelerated approvals and reduced taxes, broad enough or properly focused enough to address this complex challenge? <br /><br /> Join ULI Toronto for our third annual five-part webinar series as we seek expand our understanding of the affordable housing crisis and a broader set of ideas address it.",
+        "videos": [
+          {
+            "id": "day1",
+            "videoId": "LVzxa2a9qSY",
+            "title": "Can Up-Zoning Backfire?",
+            "description": "Exploring unintended consequences of increased zoning",
+            "thumbnailUrl": "/images/photos/upzone.png"
+          },
+          {
+            "id": "day2",
+            "videoId": "sW3TnsIr7ng",
+            "title": "How Can the Real Estate Industry Innovate?",
+            "description": "Innovation and venture in real estate development",
+            "thumbnailUrl": "https://images.unsplash.com/photo-1588733103629-b77afe0425ce?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=987"
+          },
+          {
+            "id": "day3",
+            "videoId": "wZrd2_zUbfk",
+            "title": "Is Rental the New Condo?",
+            "description": "Purpose-built rental vs condo market dynamics",
+            "thumbnailUrl": "https://plus.unsplash.com/premium_photo-1680348482277-f99e94d47234?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2069"
+          },
+          {
+            "id": "day4",
+            "videoId": "PcIOEmgjQUk",
+            "title": "Lessons from the U.S.A.",
+            "description": "Market-driven approaches to affordable housing",
+            "thumbnailUrl": "https://images.unsplash.com/photo-1514924013411-cbf25faa35bb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=990"
+          },
+          {
+            "id": "day5",
+            "videoId": "HJDP5PyU5LM",
+            "title": "Broadening the Tool Kit of Ideas",
+            "description": "Alternative affordable housing models showcase",
+            "thumbnailUrl": "https://images.unsplash.com/photo-1568790798328-efb1d3f275f2?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1064"
+          }
+        ]
+      }
+    },
+    {
+      "id": "accessibility-inclusion",
+      "title": "Accessibility & Inclusion",
+      "image": "accessibility-inclusion.jpg",
+      "content": "In FY25, ULI Toronto advanced national leadership in accessible housing through the continued growth and impact of the Accelerating Accessibility Coalition (AAC)—recognized with the ULI Americas Award for Best Program Advancing Housing Opportunities. Now spanning over 80 member organizations across six provinces, AAC brings together real estate leaders, advocates, and civic institutions to push the industry beyond code minimums. Highlights included the A Tale of Two Homes explainer video, high-impact webinars and speaking engagements, and contributions to national research on inclusive design. Through AAC, ULI Toronto is helping reshape how Canada builds—ensuring housing is accessible to all.",
+      "interactiveText": [
+        {
+          "highlightedText": "Accelerating Accessibility Coalition (AAC)",
+          "hoverImage": null,
+          "hoverImageCaption": null,
+          "pdfLink": "https://toronto.uli.org/getinvolved/the-accelerating-accessibility-coalition/"
+        },
+        {
+          "highlightedText": "A Tale of Two Homes",
+          "hoverImage": "/images/aTaleOfTwoHomes.png",
+          "hoverImageCaption": "A Tale of Two Homes - accessible home design presentation",
+          "pdfLink": "https://ulidigitalmarketing.blob.core.windows.net/ulidcnc/sites/14/2025/02/A-Tale-of-Two-Homes-accessible-home-design-video_Accompanying-Slides-1.pdf",
+          "dynamicDataTitle": "A Tale of Two Homes - Accessible Home Design",
+          "scrollToVideo": true
+        }
+      ],
+      "videoEmbed": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/xpY42xgbZmY?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&showinfo=0&loop=1&playlist=xpY42xgbZmY&start=30\" title=\"A Tale of Two Homes\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
+    },
+    {
+      "id": "climate-resiliency",
+      "title": "Climate & Resiliency",
+      "image": "climate-resiliency.jpg",
+      "content": "In FY25, ULI Toronto maintained a strong focus on climate and resiliency, integrating sustainability across our programming. Key events tackled timely issues such as Toronto's new Building Emissions Performance Standards (BEPS), the economics of geo-exchange and solar adoption, and the future of net-zero buildings. Signature sessions like Carbon Attack and The New Green Math explored how financial tools can accelerate climate action. Member tours of mass timber and net-zero projects brought sustainable design to life. While engagement on climate content has softened, our commitment remains firm: to lead conversations that align market realities with climate-smart solutions.",
+      "pullQuote": "Our commitment remains firm: to lead conversations that align market realities with climate-smart solutions.",
+      "pullQuoteAuthor": "ULI Toronto",
+      "interactiveText": [
+        {
+          "highlightedText": "Carbon Attack",
+          "hoverImage": null,
+          "hoverImageCaption": null,
+          "pdfLink": "https://sustainablebiz.ca/real-estate-must-stay-the-course-on-sustainability-uli-toronto"
+        }
+      ]
+    },
+    {
+      "id": "leadership-career-development",
+      "title": "Leadership & Career Development",
+      "image": "/images/photos/leadership-career-dev.jpg",
+      "content": "ULI Toronto continued to invest in the next generation of city builders through a robust portfolio of leadership and career development programs. Our 2024/2025 Curtner Urban Leadership Program fostered innovation and cross-sector collaboration among mid-career professionals, while our flagship Mentorship Program supported 94 emerging leaders across the industry. Events like Developing the Next Generation of Leaders, Shaping the Future, and Confessions of a City Builder offered candid insights into career growth and leadership challenges. The WLI Championship Event: Stories of Resiliency celebrated women leaders navigating adversity, reinforcing our commitment to inclusive leadership at every career stage.",
+      "images": [
+        {
+          "src": "/images/photos/leadership-career-dev.jpg",
+          "alt": "Leadership & Career Development",
+          "caption": null,
+          "position": "after"
+        }
+      ],
+      "interactiveText": [
+        {
+          "highlightedText": "Curtner Urban Leadership Program",
+          "hoverImage": null,
+          "hoverImageCaption": null,
+          "pdfLink": "https://toronto.uli.org/getinvolved/urban-leadership-program/"
+        },
+        {
+          "highlightedText": "Mentorship Program",
+          "hoverImage": null,
+          "hoverImageCaption": null,
+          "pdfLink": "https://toronto.uli.org/getinvolved/mentorship-program/"
+        }
+      ]
+    },
+    {
+      "id": "local-global-industry-tours",
+      "title": "Local & Global <br/ > Industry Tours",
+      "image": "local-global-industry-tours.jpg",
+      "content": "ULI Toronto's curated tours continued to offer members exclusive, on-the-ground access to transformative projects shaping our cities—both locally and globally. In FY25, we explored vibrant neighbourhoods like Ossington Avenue, Sterling Road, and the revitalized St. Lawrence Market North, while showcasing innovation through tours of George Brown's mass timber, net-zero Limberlost building and Waterworks' adaptive reuse. A special tour in Prince Edward County highlighted rural economic development, and our not-for-profit housing tour spotlighted community-led affordability solutions. Internationally, our London, UK Study Tour connected members to global best practices, reinforcing our commitment to place-based learning and cross-border industry insight.",
+      "pullQuote": "We explored vibrant neighbourhoods, while <span style=\"color: #4C763B; background-color: #d7f0c7; padding: 2px 8px;\">showcasing innovation</span> through tours of George Brown's mass timber, net-zero Limberlost building and Waterworks' adaptive reuse.",
+      "images": [
+        {
+          "src": "/images/photos/tour-1.jpg",
+          "alt": "Local Industry Tour",
+          "caption": null,
+          "position": "after",
+          "layout": "two-column"
+        },
+        {
+          "src": "/images/photos/responsibuli.jpeg",
+          "alt": "Global Industry Tour",
+          "caption": null,
+          "position": "after",
+          "layout": "two-column"
+        }
+      ]
+    },
+    {
+      "id": "industry-networking",
+      "title": "Industry Networking",
+      "image": "industry-networking.jpg",
+      "content": "In FY25, ULI Toronto's vibrant calendar of networking events fostered deeper connections across the real estate and city-building community. From the record-breaking 12th Annual Summer Social to the Winter Social and Ski Day, our signature gatherings brought members together in dynamic, informal settings. The WLI Women-Led City Building Mixer and Book Club Without the Books created space for meaningful dialogue and mentorship among women leaders. Playful events like Networking Bingo and City Building Trivia Night added energy and accessibility to our programming. Together, these experiences strengthened professional networks and reinforced the value of belonging to ULI Toronto.",
+      "images": [
+        {
+          "src": "/images/photos/indus-1.jpeg",
+          "alt": "Industry Networking Event 1",
+          "caption": null,
+          "position": "after",
+          "layout": "two-column"
+        },
+        {
+          "src": "/images/photos/indus-2.jpg",
+          "alt": "Industry Networking Event 2",
+          "caption": null,
+          "position": "after",
+          "layout": "two-column"
+        }
+      ],
+      "interactiveText": [
+        {
+          "highlightedText": "ULI Toronto's vibrant calendar of networking events",
+          "hoverImage": null,
+          "hoverImageCaption": null,
+          "pdfLink": "https://toronto.uli.org/events/?otherCouncils=8151"
+        },
+        {
+          "highlightedText": "WLI",
+          "hoverImage": null,
+          "hoverImageCaption": null,
+          "pdfLink": "https://toronto.uli.org/getinvolved/wli/"
+        },
+        {
+          "highlightedText": "Book Club Without the Books",
+          "hoverImage": null,
+          "hoverImageCaption": null,
+          "pdfLink": "https://toronto.uli.org/getinvolved/wli/wli-book-club-without-the-books/"
+        }
+      ]
+    },
+    {
+      "id": "navigating-public-policy",
+      "title": "Navigating Public Policy (and Politics)",
+      "image": "navigating-public-policy.jpg",
+      "content": "In a year shaped by two major elections—federal and provincial—ULI Toronto played a critical role in helping our network stay informed and responsive to fast-changing policy dynamics. Our Back to School: Coles Notes for Real Estate session distilled key legislative shifts, while the Home Truths webinar and five-part National Housing Week series unpacked urgent housing challenges, capped by a Housing Dinner at EY Canada. Just 48 hours after the federal election, we hosted a rapid-response session decoding its implications for the industry. With over 225 attendees, our session on the 2024 Provincial Policy Statement further reinforced our commitment to timely, policy-relevant content.",
+      "pullQuote": "With over 225 attendees, our session on the 2024 Provincial Policy Statement further reinforced our commitment to timely, policy-relevant content.",
+      "interactiveText": [
+        {
+          "highlightedText": "National Housing Week",
+          "hoverImage": null,
+          "hoverImageCaption": null,
+          "pdfLink": "https://toronto.uli.org/events/national-housing-week-past/"
+        }
+      ]
+    },
+    {
+      "id": "understanding-industry-economics",
+      "title": "Understanding <br /> Industry Economics",
+      "image": "understanding-industry-economics.jpg",
+      "content": "In FY25, ULI Toronto significantly dialed up programming to help our network make sense of a complex and evolving economic landscape. From macro trends to market-specific insights, our events provided timely analysis and strategic perspective. The Annual Trends in Real Estate conference delivered record-breaking engagement, while sessions like Knock On and Meeting the Moment examined recovery prospects amid uncertainty. Sector-specific events explored emerging opportunities in mid-rise housing, rental markets, employment lands, and data centers. Programs like The New Green Math connected fiscal incentives to climate goals, helping members align economic realities with long-term value creation in the built environment.",
+      "interactiveText": [
+        {
+          "highlightedText": "Annual Trends in Real Estate",
+          "hoverImage": null,
+          "hoverImageCaption": null,
+          "pdfLink": null,
+          "scrollToVideo": true
+        },
+        {
+          "highlightedText": "Knock On",
+          "hoverImage": null,
+          "hoverImageCaption": null,
+          "pdfLink": "https://toronto.uli.org/events/detail/3410D9DC-A4DF-4B31-8108-1590C0D022E4/"
+        },
+        {
+          "highlightedText": "Meeting the Moment",
+          "hoverImage": null,
+          "hoverImageCaption": null,
+          "pdfLink": "https://toronto.uli.org/events/detail/51BF634B-E75B-4614-B307-E2C426E129F6/"
+        }
+      ],
+      "videoEmbed": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/7cmVSmfruRQ?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&showinfo=0&loop=1&playlist=7cmVSmfruRQ&start=380\" title=\"ULI Annual Trends in Real Estate 2025\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>",
+      "videoTitle": "ULI Annual Trends in <br /> Real Estate 2025"
+    },
+    {
+      "id": "signature-annual-events",
+      "title": "Signature Annual Events",
+      "image": "signature-annual-events.jpg",
+      "content": "ULI Toronto's signature annual events reached new heights in FY25, reinforcing our role as the region's leading convener of industry thought leadership. Our Annual Trends in Real Estate conference delivered timely insights and drew a record audience, setting the tone for the year ahead. The 11th Meet the Chief Planners Dinner marked its most impactful edition yet, attracting over 500 attendees and more than 50 senior public officials—solidifying its place as the premier public-private planning event in Canada. The Fireside Chat with Rael Diamond, CEO, Choice Properties, offered rare executive-level perspective, rounding out a standout year for ULI Toronto's marquee programming.",
+      "interactiveText": [
+        {
+          "highlightedText": "The Fireside Chat with Rael Diamond, CEO, Choice Properties",
+          "hoverImage": null,
+          "hoverImageCaption": null,
+          "pdfLink": null,
+          "scrollToVideo": true
+        }
+      ],
+      "videoEmbed": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/P5nUHkgAcH4?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&showinfo=0&loop=1&playlist=P5nUHkgAcH4&start=180\" title=\"ULI Fireside 2025\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>",
+      "videoTitle": "ULI Fireside <br /> 2025"
+    }
+  ]
+}
