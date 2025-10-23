@@ -709,7 +709,7 @@ const LogoContainer = styled.div`
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 20px;
+  gap: 10px;
   opacity: 0;
   z-index: 3;
   width: auto;
@@ -734,24 +734,16 @@ const LogoContainer = styled.div`
   }
 
   @media (max-width: 1024px) {
-    gap: 12px;
+    gap: 8px;
+    flex-direction: column;
   }
 
   @media (max-width: 768px) {
-    gap: 10px;
+    gap: 6px;
   }
 
   @media (max-width: 480px) {
-    gap: 8px;
-  }
-
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  @media (max-width: 768px) {
-    gap: 10px;
+    gap: 4px;
   }
 `;
 
@@ -762,15 +754,15 @@ const Phase6WordsWrapper = styled.div`
   justify-content: center !important;
   width: 100% !important;
   flex-wrap: nowrap;
-  gap: 20px;
+  gap: 5px;
   
   @media (max-width: 1024px) {
     flex-direction: column;
-    gap: 15px;
+    gap: 8px;
   }
   
   @media (max-width: 768px) {
-    gap: 10px;
+    gap: 5px;
   }
 `;
 
