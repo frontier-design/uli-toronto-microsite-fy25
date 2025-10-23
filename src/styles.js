@@ -80,8 +80,6 @@ export const GridOverlay = styled.div.withConfig({
 `;
 
 export const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap');
 
   * {
     margin: 0;
