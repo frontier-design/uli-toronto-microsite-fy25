@@ -46,7 +46,7 @@ const AtAGlanceTitle = styled.h1`
 
 const AtAGlanceSubtitle = styled.h3`
   font-size: 14px;
-  color: ${colors.black};
+  color: ${colors.rubyRed};
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
