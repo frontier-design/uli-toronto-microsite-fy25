@@ -17,21 +17,21 @@ const StorySection = styled.section`
   align-items: flex-start;
   justify-content: flex-start;
   padding: 60px 0 0 0;
-  margin-bottom: ${props => props.isLast ? '80px' : '0'};
+  margin-bottom: ${props => props.$isLast ? '80px' : '0'};
 
   @media (max-width: 1024px) {
     padding: 30px 0 0 0;
-    margin-bottom: ${props => props.isLast ? '40px' : '0'};
+    margin-bottom: ${props => props.$isLast ? '40px' : '0'};
   }
 
   @media (max-width: 768px) {
     padding: 20px 0 0 0;
-    margin-bottom: ${props => props.isLast ? '30px' : '0'};
+    margin-bottom: ${props => props.$isLast ? '30px' : '0'};
   }
 
   @media (max-width: 480px) {
     padding: 16px 0 0 0;
-    margin-bottom: ${props => props.isLast ? '24px' : '0'};
+    margin-bottom: ${props => props.$isLast ? '24px' : '0'};
   }
 `;
 
@@ -319,7 +319,7 @@ const Stories = ({ storyId, sectionId, isLast = false }) => {
   }
 
   return (
-    <StorySection id={sectionId} isLast={isLast}>
+    <StorySection id={sectionId} $isLast={isLast}>
       <GridContainer>
         <GridRow>
           <GridColumn cols={4} className="story-title-offset" />
