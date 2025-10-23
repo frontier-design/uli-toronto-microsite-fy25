@@ -732,12 +732,23 @@ const LogoContainer = styled.div`
   @media (max-width: 480px) {
     gap: 8px;
   }
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  @media (max-width: 768px) {
+    gap: 10px;
+  }
 `;
 
 const Phase6WordsWrapper = styled.div`
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 100%;
 `;
 
 const Phase6Word = styled.div`
