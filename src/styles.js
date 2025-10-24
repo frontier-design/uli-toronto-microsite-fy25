@@ -29,57 +29,6 @@ export const gridConfig = {
   maxWidth: 1440,
 };
 
-export const GridOverlay = styled.div.withConfig({
-  shouldForwardProp: (prop) => prop !== "visible",
-})`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  pointer-events: none;
-  z-index: 9999;
-  opacity: ${(props) => (props.visible ? 1 : 0)};
-  display: ${(props) => (props.visible ? "block" : "none")};
-  transition: opacity 0.3s ease;
-
-  .grid-container {
-    max-width: ${gridConfig.maxWidth}px;
-    margin: 0 auto;
-    height: 100%;
-    padding: 0 ${gridConfig.margin}px;
-    display: flex;
-    gap: ${gridConfig.gutter}px;
-
-    @media (min-width: 1600px) {
-      max-width: 1800px;
-    }
-
-    @media (max-width: 768px) {
-      padding: 0 20px;
-    }
-
-    @media (max-width: 480px) {
-      padding: 0 16px;
-    }
-  }
-
-  .grid-column {
-    flex: 1;
-    background: rgba(128, 128, 128, 0.03);
-    border-left: 1px solid rgba(128, 128, 128, 0.1);
-    border-right: 1px solid rgba(128, 128, 128, 0.1);
-
-    &:first-child {
-      border-left: none;
-    }
-
-    &:last-child {
-      border-right: none;
-    }
-  }
-`;
-
 export const GlobalStyle = createGlobalStyle`
 
   * {
@@ -228,37 +177,5 @@ export const GridColumn = styled.div`
       flex: 0 0 100%;
       max-width: 100%;
     `}
-  }
-`;
-
-export const GridToggleButton = styled.button`
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  font-size: 12px;
-  cursor: pointer;
-  z-index: 10000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  border: 1px solid red;
-  opacity: 0;
-  background-color: red;
-  color: white;
-
-  &:hover {
-    opacity: 1;
-  }
-
-  @media (max-width: 768px) {
-    width: 35px;
-    height: 35px;
-    font-size: 10px;
-    top: 15px;
-    right: 15px;
   }
 `;
