@@ -8,7 +8,8 @@ export const colors = {
   lightGray: "#E0E0E0",
   lightBlue: "#D4DBEB",
   navyBlue: "#2C4D82",
-  rubyRed: "#AD1F2A",
+  brandTeal: "#00918D",
+  mutedTeal: "#cde9e8",
 };
 
 // primaryGreen: "#2F7A58",

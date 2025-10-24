@@ -10,7 +10,7 @@ const SponsorshipSection = styled.section`
 `;
 
 const SponsorshipTitle = styled.h2`
-  color: ${colors.rubyRed};
+  color: ${colors.brandTeal};
   margin-bottom: 60px;
   position: relative;
   font-size: 85px;
@@ -93,7 +93,7 @@ const SponsorLogo = styled.img`
 
 const SponsorTier = styled.div`
   font-size: 12px;
-  color: ${colors.rubyRed};
+  color: ${colors.brandTeal};
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -108,7 +108,7 @@ const ButtonContainer = styled.div`
 const SponsorButton = styled.a`
   display: inline-block;
   padding: 12px 20px;
-  background-color: ${colors.rubyRed};
+  background-color: ${colors.brandTeal};
   color: ${colors.white};
   text-decoration: none;
   border-radius: 4px;

@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { colors } from '../../../styles';
-import torontoVid from '../../../assets/videos/torontoVid.mov';
+import torontoVid from '/videos/toronto-vid-1.webm';
+import torontoVid2 from '/videos/toronto-vid-2.webm';
 import uliLogo from '../../../assets/uli-logo.png';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -748,11 +749,9 @@ const LogoContainer = styled.div`
 `;
 
 const Phase6WordsWrapper = styled.div`
-  position: relative !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  width: 100% !important;
   flex-wrap: nowrap;
   gap: 5px;
   
@@ -1142,6 +1141,7 @@ const Phase8WordLogoContainer = styled.div`
   transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
+  gap: 10px;
   opacity: 0;
 
   @media (max-width: 768px) {
@@ -1643,7 +1643,7 @@ const Narrative = () => {
                 playsInline
                 controls={false}
               >
-                <source src={torontoVid} type="video/mp4" />
+                <source src={torontoVid2} type="video/mp4" />
                 Your browser does not support the video tag.
               </Phase5Video>
             </Phase5VideoContainer>

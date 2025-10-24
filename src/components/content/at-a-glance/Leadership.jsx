@@ -11,7 +11,7 @@ const LeadershipSection = styled.section`
 
 const LeadershipTitle = styled.h2`
   max-width: 18ch;
-  color: ${colors.rubyRed};
+  color: ${colors.brandTeal};
   margin-bottom: 60px;
   position: relative;
   font-size: 85px;
@@ -61,7 +61,7 @@ const ProfileImage = styled.img`
 
 const ProfileRole = styled.div`
   font-size: 14px;
-  color: ${colors.rubyRed};
+  color: ${colors.brandTeal};
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -84,7 +84,7 @@ const LinksContainer = styled.div`
 const LeadershipLink = styled.a`
   display: inline-block;
   padding: 12px 20px;
-  background-color: ${colors.rubyRed};
+  background-color: ${colors.brandTeal};
   color: ${colors.white};
   text-decoration: none;
   border-radius: 4px;

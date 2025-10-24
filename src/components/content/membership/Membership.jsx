@@ -3,30 +3,20 @@ import { colors, GridContainer, GridRow, GridColumn } from '../../../styles';
 
 const MembershipSection = styled.section`
   width: 100%;
-  height: 100vh;
-  height: 100dvh;
   padding: 120px 0;
+  padding-bottom: 50px;
   background-color: ${colors.mutedGreen};
 
-  @media (min-width: 1600px) {
-    height: 70vh;
-    height: 70dvh;
-  }
-
   @media (max-width: 1024px) {
-    height: auto;
-    min-height: 80vh;
     padding: 100px 0;
   }
 
   @media (max-width: 768px) {
     padding: 80px 0;
-    min-height: 70vh;
   }
 
   @media (max-width: 480px) {
     padding: 60px 0;
-    min-height: 60vh;
   }
 `;
 

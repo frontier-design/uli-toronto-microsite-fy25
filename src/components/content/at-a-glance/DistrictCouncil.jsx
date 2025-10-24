@@ -14,7 +14,7 @@ const DistrictCouncilSection = styled.section`
 
 const SectionTitle = styled.h2`
   max-width: 25ch;
-  color: ${colors.rubyRed};
+  color: ${colors.brandTeal};
   margin-bottom: 60px;
   position: relative;
 
@@ -41,14 +41,14 @@ const SectionTitle = styled.h2`
 const ChartTitle = styled.h3`
   font-family: 'Big Shoulders', sans-serif;
   font-size: 24px;
-  color: ${colors.rubyRed};
+  color: ${colors.black};
   margin-bottom: 20px;
   font-weight: 700;
 `;
 
 const ChartSubtitle = styled.p`
   font-size: 14px;
-  color: ${colors.rubyRed};
+  color: ${colors.brandTeal};
   margin-bottom: 30px;
 `;
 
@@ -157,7 +157,7 @@ const BarChartContainer = styled.div`
 `;
 
 const KeyFeaturesContainer = styled.div`
-  background-color: ${colors.rubyRed};
+  background-color: ${colors.brandTeal};
   padding: 40px 30px;
   border-radius: 8px;
   display: flex;
@@ -470,7 +470,7 @@ const DistrictCouncil = ({ sectionId = "at-a-glance-district-council" }) => {
       .attr('y', d => yScale(d.attendance))
       .attr('width', xScale.bandwidth())
       .attr('height', d => yScale(0) - yScale(d.attendance))
-      .attr('fill', d => d.council === 'Toronto' ? colors.rubyRed : '#D4DBEB');
+      .attr('fill', d => d.council === 'Toronto' ? colors.brandTeal : '#D4DBEB');
 
     // Add numbers on top of bars
     g.selectAll('.bar-number')
@@ -507,7 +507,7 @@ const DistrictCouncil = ({ sectionId = "at-a-glance-district-council" }) => {
       <GridContainer>
         <GridRow>
           <GridColumn cols={12}>
-            <SectionTitle>ULI Toronto District Council <br /> At a Glance</SectionTitle>
+            <SectionTitle>ULI Toronto District Council <br /> Year At a Glance</SectionTitle>
           </GridColumn>
         </GridRow>
         

@@ -30,7 +30,7 @@ const NavigationWrapper = styled.div.withConfig({
   border-radius: 8px;
   background-color: ${props => {
     if (props.$isInMessages) return colors.navyBlue;
-    if (props.$isInAtAGlance) return colors.rubyRed;
+    if (props.$isInAtAGlance) return colors.mutedTeal;
     if (props.$isInClosingReflections) return colors.white;
     if (props.$isInMembership) return colors.white;
     return colors.mutedGreen;
@@ -89,13 +89,13 @@ const NavigationLink = styled.a.withConfig({
   color: ${props => {
     if (props.$isActive) {
       if (props.$isInMessages) return colors.navyBlue;
-      if (props.$isInAtAGlance) return colors.rubyRed;
+      if (props.$isInAtAGlance) return colors.white;
       if (props.$isInClosingReflections) return colors.primaryGreen;
       if (props.$isInMembership) return colors.primaryGreen;
       return colors.white;
     }
     if (props.$isInMessages) return colors.lightBlue;
-    if (props.$isInAtAGlance) return colors.white;
+    if (props.$isInAtAGlance) return colors.brandTeal;
     if (props.$isInClosingReflections) return colors.primaryGreen;
     if (props.$isInMembership) return colors.primaryGreen;
     return colors.primaryGreen;
@@ -103,7 +103,7 @@ const NavigationLink = styled.a.withConfig({
   background-color: ${props => {
     if (props.$isActive) {
       if (props.$isInMessages) return colors.lightBlue;
-      if (props.$isInAtAGlance) return colors.white;
+      if (props.$isInAtAGlance) return colors.brandTeal;
       if (props.$isInClosingReflections) return colors.mutedGreen;
       if (props.$isInMembership) return colors.mutedGreen;
       return colors.primaryGreen;
@@ -123,7 +123,7 @@ const NavigationLink = styled.a.withConfig({
     background-color: ${props => {
       if (props.$isActive) {
         if (props.$isInMessages) return colors.lightBlue;
-        if (props.$isInAtAGlance) return colors.white;
+        if (props.$isInAtAGlance) return colors.brandTeal;
         if (props.$isInClosingReflections) return colors.mutedGreen;
         if (props.$isInMembership) return colors.mutedGreen;
         return colors.primaryGreen;
@@ -158,13 +158,13 @@ const SubMenuLink = styled.a.withConfig({
   color: ${props => {
     if (props.$isActive) {
       if (props.$isInMessages) return colors.navyBlue;
-      if (props.$isInAtAGlance) return colors.rubyRed;
+      if (props.$isInAtAGlance) return colors.white;
       if (props.$isInClosingReflections) return colors.primaryGreen;
       if (props.$isInMembership) return colors.primaryGreen;
       return colors.white;
     }
     if (props.$isInMessages) return colors.lightBlue;
-    if (props.$isInAtAGlance) return colors.white;
+    if (props.$isInAtAGlance) return colors.brandTeal;
     if (props.$isInClosingReflections) return colors.primaryGreen;
     if (props.$isInMembership) return colors.primaryGreen;
     return colors.primaryGreen;
@@ -172,7 +172,7 @@ const SubMenuLink = styled.a.withConfig({
   background-color: ${props => {
     if (props.$isActive) {
       if (props.$isInMessages) return colors.lightBlue;
-      if (props.$isInAtAGlance) return colors.white;
+      if (props.$isInAtAGlance) return colors.brandTeal;
       if (props.$isInClosingReflections) return colors.mutedGreen;
       if (props.$isInMembership) return colors.mutedGreen;
       return colors.primaryGreen;
@@ -191,7 +191,7 @@ const SubMenuLink = styled.a.withConfig({
     background-color: ${props => {
       if (props.$isActive) {
         if (props.$isInMessages) return colors.lightBlue;
-        if (props.$isInAtAGlance) return colors.white;
+        if (props.$isInAtAGlance) return colors.brandTeal;
         if (props.$isInClosingReflections) return colors.mutedGreen;
         if (props.$isInMembership) return colors.mutedGreen;
         return colors.primaryGreen;
@@ -246,7 +246,7 @@ const IconContainer = styled.div.withConfig({
   justify-content: center;
   color: ${props => {
     if (props.$isInMessages) return colors.lightBlue;
-    if (props.$isInAtAGlance) return colors.white;
+    if (props.$isInAtAGlance) return colors.brandTeal;
     if (props.$isInClosingReflections) return colors.primaryGreen;
     if (props.$isInMembership) return colors.primaryGreen;
     return colors.primaryGreen;
@@ -265,7 +265,7 @@ const IconContainer = styled.div.withConfig({
     &::after {
       background-color: ${props => {
         if (props.$isInMessages) return colors.lightBlue;
-        if (props.$isInAtAGlance) return colors.white;
+        if (props.$isInAtAGlance) return colors.brandTeal;
         if (props.$isInClosingReflections) return colors.primaryGreen;
         if (props.$isInMembership) return colors.primaryGreen;
         return colors.primaryGreen;
@@ -279,7 +279,7 @@ const IconContainer = styled.div.withConfig({
     position: absolute;
     background-color: ${props => {
       if (props.$isInMessages) return colors.lightBlue;
-      if (props.$isInAtAGlance) return colors.white;
+      if (props.$isInAtAGlance) return colors.brandTeal;
       if (props.$isInClosingReflections) return colors.primaryGreen;
       if (props.$isInMembership) return colors.primaryGreen;
       return colors.primaryGreen;
@@ -700,7 +700,7 @@ const Navigation = () => {
                     <ULILogo 
                       color={
                         isInMessagesSection ? colors.lightBlue :
-                        isInAtAGlanceSection ? colors.white :
+                        isInAtAGlanceSection ? colors.brandTeal :
                         colors.primaryGreen
                       } 
                       height="100%" 

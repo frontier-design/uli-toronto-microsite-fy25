@@ -20,7 +20,7 @@ const AtAGlanceSection = styled.section`
 
 const AtAGlanceTitle = styled.h1`
   max-width: 18ch;
-  color: ${colors.rubyRed};
+  color: ${colors.brandTeal};
   margin-bottom: 60px;
   position: relative;
 
@@ -40,13 +40,13 @@ const AtAGlanceTitle = styled.h1`
   }
 
   @media (max-width: 480px) {
-    font-size: 42px;
+    font-size: 42px; 
   }
 `;
 
 const AtAGlanceSubtitle = styled.h3`
   font-size: 14px;
-  color: ${colors.rubyRed};
+  color: ${colors.brandTeal};
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -74,7 +74,7 @@ const AtAGlanceContent = styled.p`
 
 const FinancialTitle = styled.h2`
     max-width: 18ch;
-    color: ${colors.rubyRed};
+    color: ${colors.brandTeal};
     margin-bottom: 90px;
     position: relative;
     font-size: 85px;
@@ -122,7 +122,7 @@ const TableHeader = styled.div`
 
 const TableTitle = styled.h3`
   font-size: 36px;
-  color: ${colors.rubyRed};
+  color: ${colors.black};
   font-family: 'Big Shoulders', sans-serif;
   font-weight: 700;
   margin: 0;
@@ -158,7 +158,7 @@ const TotalRow = styled(TableRow)`
   margin-top: 20px;
   padding: 16px 12px;
   border-top: none;
-  background-color: ${colors.rubyRed} !important;
+  background-color: ${colors.brandTeal} !important;
 `;
 
 const TotalLabel = styled(TableLabel)`
@@ -178,7 +178,7 @@ const TotalValue = styled(TableValue)`
 const HighlightsWrapper = styled.div.withConfig({
   shouldForwardProp: (prop) => prop !== 'isContentVisible',
 })`
-  background-color: ${colors.rubyRed};
+  background-color: ${colors.brandTeal};
   border-radius: 8px;
   display: flex;
   flex-direction: column;

@@ -21,9 +21,9 @@ const MainContent = () => {
       <Stories storyId="signature-annual-events" sectionId="signature-annual-events" isLast={true} />
 
       <SectionDivider 
-        backgroundColor={colors.rubyRed} 
+        backgroundColor={colors.brandTeal} 
         textColor={colors.white} 
-        text="At a Glance" 
+        text="Year AT <br /> a glance" 
       />
       <AtAGlance sectionId="at-a-glance" />
     </>
