@@ -253,20 +253,13 @@ const Phase3Word = styled.span`
   color: ${colors.white};
   text-transform: uppercase;
 
-  @media (min-width: 1600px) {
-    font-size: 115px;
+
+  @media (max-width: 1424px) {
+    font-size: 70px;
   }
 
-  @media (max-width: 1024px) {
-    font-size: 64px;
-  }
-
-  @media (max-width: 768px) {
-    font-size: 48px;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 36px;
+  @media (max-width: 1222px) {
+    font-size: 50px;
   }
 `;
 
@@ -282,16 +275,12 @@ const Phase3Large = styled.div`
     font-size: 210px;
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1424px) {
+    font-size: 150px;
+  }
+
+  @media (max-width: 1222px) {
     font-size: 120px;
-  }
-
-  @media (max-width: 768px) {
-    font-size: 72px;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 52px;
   }
 `;
 
@@ -586,7 +575,7 @@ const Phase5VideoContainer = styled.div`
 `;
 
 const Phase5Video = styled.video`
-  width: 700px;
+  width: 45vw;
   height: 600px;
   border-radius: 12px;
   object-fit: cover;
