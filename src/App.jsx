@@ -1,5 +1,6 @@
 import React from 'react';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { GlobalStyle, colors } from './styles';
 import { Navigation, LandingMoment, Narrative, Messages, MainContent, DynamicData, SectionDivider, Membership, ClosingReflections, Footer } from './components';
 function App() {
@@ -20,13 +21,14 @@ function App() {
       <SectionDivider 
         backgroundColor={colors.primaryGreen} 
         textColor={colors.mutedGreen} 
-        text="Top Stories <br /> From 2025" 
+        text="Top Stories <br /> From 2025"  
       />
       <MainContent />
        <ClosingReflections />
       <Membership />
       <Footer />
       <Analytics />
+      <SpeedInsights />
     </>
   );
 }
