@@ -38,12 +38,12 @@
     {
       "id": "critical-industry-insights",
       "title": "Critical Industry Insights",
-      "image": "critical-industry-insights.jpg",
+      "image": "/images/new-photos/new-critical-indus.jpg",
       "content": "In a year of economic uncertainty, policy shifts, senior order elections, and geopolitical disruption, ULI Toronto provided a trusted platform for critical industry dialogue. Through timely programs on AI, housing affordability, climate action, and reconciliation, we offered insights that helped members navigate complexity and lead with confidence. From decoding Bill 17 to advancing inclusive design, our initiatives reflected a commitment to thought leadership and collaboration. By convening public and private sector voices, we enabled forward-thinking conversations that shaped the region's real estate landscape—and reinforced ULI Toronto's role as a catalyst for meaningful, mission-aligned solutions in a rapidly changing environment.",
       "pullQuote": "By convening public and private sector voices, <span style=\"color: #4C763B; background-color: #d7f0c7; padding: 2px 8px;\">ULI enabled forward-thinking conversations</span> that shaped the region's real estate landscape",
       "images": [
         {
-          "src": "/images/landing-stacking-cards/stack-4.jpeg",
+          "src": "/images/new-photos/new-critical-indus.jpg",
           "alt": "Critical Industry Insights",
           "caption": null,
           "position": "after"
@@ -53,11 +53,11 @@
     {
       "id": "esg-dei-reconciliation",
       "title": "ESG, DEI & Reconciliation",
-      "image": "esg-dei-reconciliation.jpg",
+      "image": "/images/new-photos/new-esg-dei.jpg",
       "content": "Our commitment to environmental, social, and governance principles drives everything we do. We champion diversity, equity, and inclusion initiatives that create more representative leadership across the industry. Through meaningful reconciliation efforts, our Pathways to Inclusion program, and our award-winning Truth & Reconciliation Guide—Answering the Call to Action 92, we work to build respectful partnerships with Indigenous communities, ensuring that development projects honor traditional territories and create shared economic opportunities for all.",
       "images": [
         {
-          "src": "https://ulidigitalmarketing.blob.core.windows.net/ulidcnc/sites/14/2020/11/AB6A7198-780x400.jpg",
+          "src": "/images/new-photos/new-esg-dei.jpg",
           "alt": "ESG, DEI & Reconciliation",
           "caption": null,
           "position": "after"
@@ -223,7 +223,7 @@
       "pullQuote": "We explored vibrant neighbourhoods, while <span style=\"color: #4C763B; background-color: #d7f0c7; padding: 2px 8px;\">showcasing innovation</span> through tours of George Brown's mass timber, net-zero Limberlost building and Waterworks' adaptive reuse.",
       "images": [
         {
-          "src": "/images/photos/tour-1.jpg",
+          "src": "/images/new-photos/new-local-insights.jpg",
           "alt": "Local Industry Tour",
           "caption": null,
           "position": "after",
