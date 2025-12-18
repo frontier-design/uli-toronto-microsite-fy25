@@ -8,8 +8,10 @@ import {
 } from '../../styles';
 import { useGSAP, fadeInUp, fadeInLeft, scaleIn, gsap } from '../../hooks/useGSAP';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import videoSrc from '../../assets/videos/ULIToronto_WebVideo.mp4';
-import backgroundVideoSrc from '../../assets/videos/ULIToronto_WebVideoCompressed.mp4';
+
+// Use URL paths for videos to avoid bundling large files
+const videoSrc = '/videos/ULIToronto_WebVideoCompressed.mp4';
+const backgroundVideoSrc = '/videos/ULIToronto_WebVideoCompressed.mp4';
 
 gsap.registerPlugin(ScrollTrigger);
 

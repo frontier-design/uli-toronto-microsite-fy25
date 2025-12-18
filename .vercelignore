@@ -3,9 +3,9 @@ public/images/narrative-video.mp4
 public/videos/narrative-video.mp4
 public/videos/toronto-vid-1.webm
 public/videos/toronto-vid-2.webm
-src/assets/videos/ULIToronto_WebVideoCompressed.webm
-src/assets/videos/ULIToronto_WebVideo.mp4
-src/assets/videos/ULIToronto_WebVideoCompressed.mp4
+
+# Exclude source asset videos (large files)
+src/assets/videos/
 
 # Build artifacts
 dist/
