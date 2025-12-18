@@ -18,6 +18,7 @@ const Image = styled.img`
   height: auto;
   display: block;
   object-fit: cover;
+  ${props => props.$maxHeight && `max-height: ${props.$maxHeight};`}
 `;
 
 const ImagePlaceholder = styled.div`
@@ -40,12 +41,12 @@ const ImageCaption = styled.p`
   text-align: center;
 `;
 
-const StoryImage = ({ src, alt, caption }) => {
+const StoryImage = ({ src, alt, caption, maxHeight }) => {
   return (
     <ImageContainer>
       <ImageWrapper>
         {src ? (
-          <Image src={src} alt={alt} />
+          <Image src={src} alt={alt} $maxHeight={maxHeight} />
         ) : (
           <ImagePlaceholder>{alt || 'Image placeholder'}</ImagePlaceholder>
         )}

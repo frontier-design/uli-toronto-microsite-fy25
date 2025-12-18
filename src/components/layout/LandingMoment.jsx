@@ -6,20 +6,113 @@ import {
   GridRow,
   GridColumn
 } from '../../styles';
-import { useGSAP, fadeInUp, fadeInLeft, fadeInRight, scaleIn, gsap } from '../../hooks/useGSAP';
+import { useGSAP, fadeInUp, fadeInLeft, scaleIn, gsap } from '../../hooks/useGSAP';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import videoSrc from '../../assets/videos/ULIToronto_WebVideo.mp4';
+import backgroundVideoSrc from '../../assets/videos/ULIToronto_WebVideoCompressed.mp4';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const LandingContainer = styled.div`
   min-height: 100vh;
-  min-height: 100dvh;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
 
   @media (max-width: 1024px) {
     min-height: 100vh;
-    min-height: -webkit-fill-available;
+    min-height: 100svh;
+  }
+
+  @media (min-width: 1025px) {
+    cursor: none;
+  }
+`;
+
+const VideoPosterBackground = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+  background-image: url('/images/video-poster.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+`;
+
+const VideoBackground = styled.video`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  background: transparent;
+  
+  @media (max-width: 768px) {
+    /* Ensure video displays on mobile */
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    min-height: 100%;
+    min-width: 100%;
+  }
+`;
+
+const GradientOverlay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.5) 40%, transparent 100%);
+  z-index: -1;
+`;
+
+const CustomCursor = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background-color: ${colors.mutedGreen};
+  color: ${colors.primaryGreen};
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  will-change: transform, opacity;
+
+  &.visible {
+    opacity: 1;
+  }
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+`;
+
+const PlayIcon = styled.span`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+  svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
   }
 `;
 
@@ -28,15 +121,17 @@ const MainContent = styled.div`
   display: flex;
   align-items: flex-end;
   min-height: 100vh;
-  min-height: 100dvh;
+  min-height: 100svh;
   padding: 40px 0;
+  position: relative;
+  z-index: 1;
 
   @media (max-width: 1024px) {
-    align-items: flex-start;
+    align-items: flex-end;
     padding-top: 120px;
     padding-bottom: 60px;
     min-height: 100vh;
-    min-height: -webkit-fill-available;
+    min-height: 100svh;
   }
 
   @media (max-width: 768px) {
@@ -66,6 +161,7 @@ const LeftContent = styled.div`
     letter-spacing: -0.03em;
     font-family: 'Big Shoulders', sans-serif;
     font-weight: 800;
+    color: white;
 
     @media (min-width: 1600px) {
       font-size: 90px;
@@ -85,52 +181,27 @@ const LeftContent = styled.div`
   }
 
   @media (max-width: 1024px) {
-    justify-content: flex-start;
-    align-self: stretch;
-    margin-bottom: 40px;
-    padding-top: 150px;
+    justify-content: flex-end;
+    align-self: flex-end;
+    margin-bottom: 0;
+    padding-top: 0;
   }
 
   @media (max-width: 768px) {
-    margin-bottom: 50px;
-    padding-top: 30px;
+    margin-bottom: 0;
+    padding-top: 0;
   }
 
   @media (max-width: 480px) {
-    margin-bottom: 40px;
-    padding-top: 20px;
-  }
-`;
-
-const RightContent = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-
-  @media (max-width: 1024px) {
-    height: 50vh;
-    min-height: 400px;
-    padding: 40px 0;
-  }
-
-  @media (max-width: 768px) {
-    min-height: 300px;
-    height: 40vh;
-    padding: 30px 0;
-  }
-
-  @media (max-width: 480px) {
-    min-height: 250px;
-    height: 35vh;
-    padding: 20px 0;
+    margin-bottom: 0;
+    padding-top: 0;
   }
 `;
 
 const CategoryText = styled.p`
   font-size: 16px;
   font-weight: 400;
-  color: ${colors.black};
+  color: white;
   margin-bottom: 10px;
 
   @media (min-width: 1600px) {
@@ -193,7 +264,7 @@ const CTAButton = styled.a`
 `;
 
 const LandAcknowledgement = styled.a`
-  color: ${colors.black};
+  color: white;
   text-decoration: none;
   font-size: 16px;
   display: inline-flex;
@@ -203,7 +274,7 @@ const LandAcknowledgement = styled.a`
   text-decoration: underline;
 
   &:hover {
-    color: ${colors.primaryGreen};
+    color: ${colors.mutedGreen};
     transform: translateX(4px);
   }
 
@@ -220,65 +291,66 @@ const LandAcknowledgement = styled.a`
   }
 `;
 
-const StackingContainer = styled.div`
+// Video Modal Components
+const VideoModalOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  min-height: calc(100vh - 80px);
-  position: relative;
+  background-color: rgba(0, 0, 0, 0.95);
   display: flex;
   align-items: center;
   justify-content: center;
-
-  @media (max-width: 1024px) {
-    min-height: 400px;
-    height: 100%;
-  }
-
-  @media (max-width: 768px) {
-    min-height: 300px;
-    height: 100%;
-  }
-
-  @media (max-width: 480px) {
-    min-height: 250px;
-    height: 100%;
-  }
+  z-index: 20000;
+  padding: 20px;
+  opacity: ${props => props.$isOpen ? 1 : 0};
+  pointer-events: ${props => props.$isOpen ? 'all' : 'none'};
+  transition: opacity 0.3s ease;
 `;
 
-const StackingCard = styled.div`
-  position: absolute;
-  opacity: 0;
-  transform-origin: center center;
-  border-radius: 12px;
-  background-image: url(${props => props.$bgImage});
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: ${props => props.$width}px;
-  height: ${props => props.$height}px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+const VideoModalWrapper = styled.div`
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  transform: ${props => props.$isOpen ? 'scale(1)' : 'scale(0.9)'};
+  transition: transform 0.3s ease;
 
   @media (min-width: 1600px) {
-    width: ${props => props.$width * 1.3}px;
-    height: ${props => props.$height * 1.3}px;
+    max-width: 1400px;
   }
 
-  @media (max-width: 1024px) {
-    width: ${props => props.$width * 0.65}px;
-    height: ${props => props.$height * 0.65}px;
-  }
-  
   @media (max-width: 768px) {
-    width: ${props => props.$width * 0.5}px;
-    height: ${props => props.$height * 0.5}px;
-  }
-
-  @media (max-width: 480px) {
-    width: ${props => props.$width * 0.4}px;
-    height: ${props => props.$height * 0.4}px;
+    width: 100%;
   }
 `;
 
+const VideoModalHeader = styled.div`
+  position: absolute;
+  top: -50px;
+  right: 0px;
+  z-index: 10;
+
+  @media (max-width: 768px) {
+    top: -45px;
+  }
+`;
+
+const VideoModalContent = styled.div`
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #000;
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+`;
+
+// Land Acknowledgement Modal Components
 const ModalOverlay = styled.div`
   position: fixed;
   top: 0;
@@ -522,21 +594,19 @@ const HighlightedLink = styled.a`
   }
 `;
 
-// Card configurations with varying sizes and rotations
-const cardConfigs = [
-  { scale: 0.9, rotation: -3, image: '/images/landing-stacking-cards/stack-1.jpeg', width: 550, height: 400 },
-  { scale: 0.95, rotation: 2, image: '/images/landing-stacking-cards/stack-2.jpeg', width: 480, height: 580 },
-  { scale: 1, rotation: -1, image: '/images/landing-stacking-cards/stack-3.jpeg', width: 600, height: 420 },
-  { scale: 0.92, rotation: 4, image: '/images/landing-stacking-cards/stack-4.jpeg', width: 520, height: 520 },
-  { scale: 0.88, rotation: -2, image: '/images/landing-stacking-cards/stack-5.jpeg', width: 560, height: 460 },
-];
-
 const LandingMoment = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const stackingRef = useRef(null);
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+  const [isCursorVisible, setIsCursorVisible] = useState(false);
+  
+  const videoModalRef = useRef(null);
+  const videoBackgroundRef = useRef(null);
+  const cursorRef = useRef(null);
+  const lastX = useRef(0);
 
   const handleOpenModal = (e) => {
     e.preventDefault();
+    e.stopPropagation();
     setIsModalOpen(true);
     document.body.style.overflow = 'hidden';
   };
@@ -552,22 +622,211 @@ const LandingMoment = () => {
     }
   };
 
+  // Video Modal handlers
+  const handleOpenVideoModal = () => {
+    setIsVideoModalOpen(true);
+    setIsCursorVisible(false);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const handleCloseVideoModal = () => {
+    setIsVideoModalOpen(false);
+    document.body.style.overflow = 'unset';
+    // Pause the video when closing
+    if (videoModalRef.current) {
+      videoModalRef.current.pause();
+    }
+  };
+
+  const handleVideoOverlayClick = (e) => {
+    if (e.target === e.currentTarget) {
+      handleCloseVideoModal();
+    }
+  };
+
+  // Auto-play video when modal opens
+  useEffect(() => {
+    if (isVideoModalOpen && videoModalRef.current) {
+      // Small delay to ensure modal is fully rendered
+      const timer = setTimeout(() => {
+        if (videoModalRef.current) {
+          videoModalRef.current.play().catch(err => {
+            console.log('Video autoplay failed:', err);
+          });
+        }
+      }, 100);
+      
+      return () => clearTimeout(timer);
+    }
+  }, [isVideoModalOpen]);
+
+  // Optimize background video for mobile performance
+  useEffect(() => {
+    const video = videoBackgroundRef.current;
+    if (!video) return;
+
+    // Force load the video
+    video.load();
+    
+    // Ensure video plays
+    const ensureVideoPlays = () => {
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch((err) => {
+          console.log('Video autoplay blocked, waiting for interaction:', err);
+          // Try again after user interaction
+          const tryPlay = () => {
+            video.play().catch(() => {});
+            document.removeEventListener('touchstart', tryPlay);
+            document.removeEventListener('touchend', tryPlay);
+            document.removeEventListener('click', tryPlay);
+            document.removeEventListener('scroll', tryPlay);
+          };
+          document.addEventListener('touchstart', tryPlay, { once: true, passive: true });
+          document.addEventListener('touchend', tryPlay, { once: true, passive: true });
+          document.addEventListener('click', tryPlay, { once: true });
+          document.addEventListener('scroll', tryPlay, { once: true, passive: true });
+        });
+      }
+    };
+
+    // Multiple event listeners to ensure video plays
+    const handleCanPlay = () => {
+      ensureVideoPlays();
+    };
+    
+    const handleLoadedMetadata = () => {
+      ensureVideoPlays();
+    };
+
+    video.addEventListener('canplay', handleCanPlay, { once: true });
+    video.addEventListener('loadedmetadata', handleLoadedMetadata, { once: true });
+    video.addEventListener('loadeddata', ensureVideoPlays, { once: true });
+    
+    // Try immediately if already ready
+    if (video.readyState >= 1) {
+      ensureVideoPlays();
+    }
+    
+    // Fallback timeout
+    const timeout = setTimeout(() => {
+      ensureVideoPlays();
+    }, 2000);
+
+    // Handle visibility changes to pause when not visible (saves battery on mobile)
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        video.pause();
+      } else {
+        video.play().catch(() => {});
+      }
+    };
+    
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    return () => {
+      clearTimeout(timeout);
+      video.removeEventListener('canplay', handleCanPlay);
+      video.removeEventListener('loadedmetadata', handleLoadedMetadata);
+      video.removeEventListener('loadeddata', ensureVideoPlays);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
+  }, []);
+
+  // Custom cursor handlers
+  const handleMouseMove = (e) => {
+    if (!cursorRef.current) return;
+    
+    // Check if hovering over interactive elements
+    const isInteractive = e.target.closest('a, button');
+    if (isInteractive) {
+      setIsCursorVisible(false);
+      return;
+    }
+    
+    // Only show cursor if we're in the landing section
+    if (!isCursorVisible) {
+      setIsCursorVisible(true);
+    }
+    
+    const x = e.clientX;
+    const y = e.clientY;
+    
+    // Calculate horizontal velocity for rotation
+    const deltaX = x - lastX.current;
+    lastX.current = x;
+    
+    // Smoothly tilt the cursor based on movement speed
+    // Max tilt of 12 degrees
+    const rotation = Math.max(-12, Math.min(12, deltaX * 0.8));
+
+    gsap.to(cursorRef.current, {
+      x: x,
+      y: y,
+      xPercent: -50,
+      yPercent: -50,
+      rotation: rotation,
+      duration: 0.6,
+      ease: "power3.out",
+      overwrite: "auto"
+    });
+  };
+
+  const handleMouseEnter = (e) => {
+    // Set initial position before showing cursor
+    if (cursorRef.current) {
+      gsap.set(cursorRef.current, { 
+        x: e.clientX, 
+        y: e.clientY,
+        xPercent: -50,
+        yPercent: -50,
+        scale: 0.8 
+      });
+    }
+    setIsCursorVisible(true);
+    gsap.to(cursorRef.current, { 
+      scale: 1, 
+      duration: 0.3, 
+      ease: "back.out(1.7)" 
+    });
+  };
+
+  const handleMouseLeave = () => {
+    setIsCursorVisible(false);
+    gsap.to(cursorRef.current, { 
+      scale: 0.8, 
+      duration: 0.3, 
+      ease: "power2.in" 
+    });
+  };
+
+  const handleInteractiveEnter = () => {
+    setIsCursorVisible(false);
+  };
+
+  const handleInteractiveLeave = () => {
+    // Only show cursor again if we're still in the landing section
+    setIsCursorVisible(true);
+  };
+
+  const handleLandingClick = (e) => {
+    // Don't open video modal if clicking on interactive elements
+    const isInteractive = e.target.closest('a, button');
+    if (!isInteractive) {
+      handleOpenVideoModal();
+    }
+  };
+
   const containerRef = useGSAP(() => {
     const tl = gsap.timeline({ delay: 0.2 });
     
-    // Animate category text and stacking container simultaneously
+    // Animate category text
     tl.fromTo('.category-text', fadeInUp, {
       ...fadeInUp,
       opacity: 1,
       y: 0,
       duration: 0.6
     })
-    .fromTo('.stacking-container', fadeInRight, {
-      ...fadeInRight,
-      opacity: 1,
-      x: 0,
-      duration: 0.6
-    }, "-=0.6")
     // Then animate the main title
     .fromTo('.main-title', fadeInLeft, {
       ...fadeInLeft,
@@ -590,188 +849,168 @@ const LandingMoment = () => {
     }, "-=0.2");
   });
 
-  // Stacking animation effect
-  useEffect(() => {
-    if (!stackingRef.current) return;
-
-    const cards = Array.from(stackingRef.current.querySelectorAll('.stacking-card'));
-    if (cards.length === 0) return;
-
-    const maxVisibleCards = 10;
-    let cardIndex = 0;
-    const visibleCards = [];
-
-    // Set all cards to invisible initially
-    cards.forEach(card => {
-      gsap.set(card, { 
-        opacity: 0, 
-        y: -150,
-        scale: 0.8,
-        zIndex: 0
-      });
-    });
-
-    const dropNextCard = () => {
-      const card = cards[cardIndex % cards.length];
-      const config = cardConfigs[cardIndex % cardConfigs.length];
-
-      // If we have max cards, remove the bottom one
-      if (visibleCards.length >= maxVisibleCards) {
-        const bottomCard = visibleCards.shift();
-        gsap.to(bottomCard, {
-          opacity: 0,
-          y: 100,
-          duration: 0.5,
-          ease: 'power2.in',
-        });
-      }
-
-      // Add new card to visible stack
-      visibleCards.push(card);
-
-      // Update z-index for all visible cards
-      visibleCards.forEach((visCard, idx) => {
-        gsap.set(visCard, { zIndex: idx });
-      });
-
-      // Animate the new card dropping in
-      gsap.fromTo(card,
-        {
-          opacity: 0,
-          y: -150,
-          scale: config.scale * 0.8,
-          rotation: config.rotation,
-          zIndex: visibleCards.length - 1,
-        },
-        {
-          opacity: 1,
-          y: 0,
-          scale: config.scale,
-          rotation: config.rotation,
-          duration: 0.8,
-          ease: 'power2.out',
-          onComplete: () => {
-            cardIndex++;
-            setTimeout(dropNextCard, 1200);
-          }
-        }
-      );
-    };
-
-    // Start the animation loop
-    const initialDelay = setTimeout(dropNextCard, 500);
-
-    return () => {
-      clearTimeout(initialDelay);
-      cards.forEach(card => gsap.killTweensOf(card));
-    };
-  }, []);
-
   return (
-    <LandingContainer id="landing" ref={containerRef}>
-      <MainContent>
-        <GridContainer>
-          <GridRow>
-            {/* Left Content - 6 columns on desktop, 12 on mobile/tablet */}
-            <GridColumn cols={6}>
-              <LeftContent>
-                <CategoryText className="category-text">ULI Toronto FY25 Annual Impact Report</CategoryText>
-                <h1 className="main-title">
-                  Meeting the Moment: <br />
-                  Leadership for a New<br />
-                  Urban Future
-                </h1>
-                <CTAButton href="https://toronto.uli.org/about/membership/" target="_blank" rel="noopener noreferrer" className="cta-button">
-                  Become a Member
-                </CTAButton>
-                <LandAcknowledgement href="#" onClick={handleOpenModal} className="land-acknowledgement">
-                  Land Acknowledgement ↗
-                </LandAcknowledgement>
-              </LeftContent>
-            </GridColumn>
+    <>
+      <CustomCursor 
+        ref={cursorRef}
+        className={isCursorVisible ? 'visible' : ''} 
+      >
+        See the Full Video
+      </CustomCursor>
 
-            {/* Right Content - 6 columns on desktop, 12 on mobile/tablet */}
-            <GridColumn cols={6}>
-              <RightContent>
-                <StackingContainer ref={stackingRef} className="stacking-container">
-                  {cardConfigs.map((config, index) => (
-                    <StackingCard 
-                      key={index} 
-                      className="stacking-card"
-                      $bgImage={config.image}
-                      $width={config.width}
-                      $height={config.height}
+      <LandingContainer 
+        id="landing" 
+        ref={containerRef}
+        onMouseMove={handleMouseMove}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        onClick={handleLandingClick}
+      >
+        {/* Poster image as fallback background - always visible behind video */}
+        <VideoPosterBackground />
+        <VideoBackground
+          ref={videoBackgroundRef}
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/images/video-poster.jpg"
+          preload="auto"
+          onError={(e) => {
+            console.error('Background video failed to load:', e);
+          }}
+          onLoadedData={() => {
+            console.log('Background video loaded successfully');
+          }}
+        >
+          {/* Compressed MP4 - works on all browsers including iOS/Safari */}
+          <source src={backgroundVideoSrc} type="video/mp4" />
+        </VideoBackground>
+        <GradientOverlay />
+        <MainContent>
+          <GridContainer>
+            <GridRow>
+              {/* Left Content - 8 columns on desktop for better readability, 12 on mobile/tablet */}
+              <GridColumn cols={8}>
+                <LeftContent>
+                  <CategoryText className="category-text">ULI Toronto FY25 Annual Impact Report</CategoryText>
+                  <h1 className="main-title">
+                    Meeting the Moment: <br />
+                    Leadership for a New<br />
+                    Urban Future
+                  </h1>
+                  <CTAButton 
+                    href="https://toronto.uli.org/about/membership/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="cta-button"
+                    onMouseEnter={handleInteractiveEnter}
+                    onMouseLeave={handleInteractiveLeave}
+                  >
+                    Become a Member
+                  </CTAButton>
+                  <LandAcknowledgement 
+                    href="#" 
+                    onClick={handleOpenModal} 
+                    className="land-acknowledgement"
+                    onMouseEnter={handleInteractiveEnter}
+                    onMouseLeave={handleInteractiveLeave}
+                  >
+                    Land Acknowledgement ↗
+                  </LandAcknowledgement>
+                </LeftContent>
+              </GridColumn>
+            </GridRow>
+          </GridContainer>
+        </MainContent>
+
+        {/* Land Acknowledgement Modal */}
+        <ModalOverlay $isOpen={isModalOpen} onClick={handleOverlayClick}>
+          <ModalWrapper $isOpen={isModalOpen}>
+            <ModalHeader>
+              <CloseButton onClick={handleCloseModal} aria-label="Close modal">
+                Close
+              </CloseButton>
+            </ModalHeader>
+            <ModalContent>
+              <ModalBody>
+                <ModalLeftColumn>
+                  <ModalTitle>Land Acknowledgement</ModalTitle>
+                  <ModalText>
+                    ULI Toronto acknowledges that the land on which we work is the traditional territory of many nations, including the Mississaugas of the Credit, the Anishnabeg, the Chippewa, the Haudenosaunee, and the Wendat peoples. This territory is covered by Treaty 13 with the Mississaugas of the Credit and is now home to many diverse First Nations, Inuit, and Métis peoples.
+                    <br /><br />
+                    As city builders with privileged access to land, we have an obligation to walk the path of reconciliation. In FY25, ULI Toronto deepened this commitment through <HighlightedLink href="https://toronto.uli.org/getinvolved/truth-and-reconciliation/" target="_blank" rel="noopener noreferrer">Canada's first Truth & Reconciliation guide for the real estate industry</HighlightedLink>: Answering the Call to Action 92, developed in partnership with the Shared Path Consultation Initiative and Indigenous leaders.
+                  </ModalText>
+                </ModalLeftColumn>
+                <ModalRightColumn>
+                  <ImageStack>
+                    <StackedImage 
+                      $bgImage="https://ulidigitalmarketing.blob.core.windows.net/ulidcnc/sites/14/2024/09/ULI_Shared-Path-Workshop-1-Group-photo_June-2022-480x297.png"
+                      $transform="rotate(-3deg)"
+                      $zIndex={1}
+                      className="image-1"
+                      style={{
+                        width: '85%',
+                        height: '200px',
+                        top: '0',
+                        left: '5%'
+                      }}
                     />
-                  ))}
-                </StackingContainer>
-              </RightContent>
-            </GridColumn>
-          </GridRow>
-        </GridContainer>
-      </MainContent>
+                    <StackedImage 
+                      $bgImage="https://ulidigitalmarketing.blob.core.windows.net/ulidcnc/sites/14/2024/09/Indigenous-Relations-Workshop-1-Shared-Path-Chair-Carolyn-King-and-ULI-Toronto-Executive-Director-Richard-Joy-480x320.jpg"
+                      $transform="rotate(2deg)"
+                      $zIndex={2}
+                      className="image-2"
+                      style={{
+                        width: '75%',
+                        height: '200px',
+                        top: '175px',
+                        right: '8%'
+                      }}
+                    />
+                    <StackedImage 
+                      $bgImage="https://ulidigitalmarketing.blob.core.windows.net/ulidcnc/sites/14/2024/09/Mural_U-of-T_Que-Rock_Nipissing-First-Nation-480x360.jpg"
+                      $transform="rotate(-2deg)"
+                      $zIndex={3}
+                      className="image-3"
+                      style={{
+                        width: '70%',
+                        height: '180px',
+                        bottom: '0',
+                        left: '10%'
+                      }}
+                    />
+                  </ImageStack>
+                </ModalRightColumn>
+              </ModalBody>
+            </ModalContent>
+          </ModalWrapper>
+        </ModalOverlay>
+      </LandingContainer>
 
-      <ModalOverlay $isOpen={isModalOpen} onClick={handleOverlayClick}>
-        <ModalWrapper $isOpen={isModalOpen}>
-          <ModalHeader>
-            <CloseButton onClick={handleCloseModal} aria-label="Close modal">
+      {/* Video Modal */}
+      <VideoModalOverlay $isOpen={isVideoModalOpen} onClick={handleVideoOverlayClick}>
+        <VideoModalWrapper $isOpen={isVideoModalOpen}>
+          <VideoModalHeader>
+            <CloseButton onClick={handleCloseVideoModal} aria-label="Close video">
               Close
             </CloseButton>
-          </ModalHeader>
-          <ModalContent>
-            <ModalBody>
-              <ModalLeftColumn>
-                <ModalTitle>Land Acknowledgement</ModalTitle>
-                <ModalText>
-                  ULI Toronto acknowledges that the land on which we work is the traditional territory of many nations, including the Mississaugas of the Credit, the Anishnabeg, the Chippewa, the Haudenosaunee, and the Wendat peoples. This territory is covered by Treaty 13 with the Mississaugas of the Credit and is now home to many diverse First Nations, Inuit, and Métis peoples.
-                  <br /><br />
-                  As city builders with privileged access to land, we have an obligation to walk the path of reconciliation. In FY25, ULI Toronto deepened this commitment through <HighlightedLink href="https://toronto.uli.org/getinvolved/truth-and-reconciliation/" target="_blank" rel="noopener noreferrer">Canada's first Truth & Reconciliation guide for the real estate industry</HighlightedLink>: Answering the Call to Action 92, developed in partnership with the Shared Path Consultation Initiative and Indigenous leaders.
-                </ModalText>
-              </ModalLeftColumn>
-              <ModalRightColumn>
-                <ImageStack>
-                  <StackedImage 
-                    $bgImage="https://ulidigitalmarketing.blob.core.windows.net/ulidcnc/sites/14/2024/09/ULI_Shared-Path-Workshop-1-Group-photo_June-2022-480x297.png"
-                    $transform="rotate(-3deg)"
-                    $zIndex={1}
-                    className="image-1"
-                    style={{
-                      width: '85%',
-                      height: '200px',
-                      top: '0',
-                      left: '5%'
-                    }}
-                  />
-                  <StackedImage 
-                    $bgImage="https://ulidigitalmarketing.blob.core.windows.net/ulidcnc/sites/14/2024/09/Indigenous-Relations-Workshop-1-Shared-Path-Chair-Carolyn-King-and-ULI-Toronto-Executive-Director-Richard-Joy-480x320.jpg"
-                    $transform="rotate(2deg)"
-                    $zIndex={2}
-                    className="image-2"
-                    style={{
-                      width: '75%',
-                      height: '200px',
-                      top: '175px',
-                      right: '8%'
-                    }}
-                  />
-                  <StackedImage 
-                    $bgImage="https://ulidigitalmarketing.blob.core.windows.net/ulidcnc/sites/14/2024/09/Mural_U-of-T_Que-Rock_Nipissing-First-Nation-480x360.jpg"
-                    $transform="rotate(-2deg)"
-                    $zIndex={3}
-                    className="image-3"
-                    style={{
-                      width: '70%',
-                      height: '180px',
-                      bottom: '0',
-                      left: '10%'
-                    }}
-                  />
-                </ImageStack>
-              </ModalRightColumn>
-            </ModalBody>
-          </ModalContent>
-        </ModalWrapper>
-      </ModalOverlay>
-    </LandingContainer>
+          </VideoModalHeader>
+          <VideoModalContent>
+            <video
+              ref={videoModalRef}
+              controls
+              autoPlay
+              playsInline
+              muted={false}
+              loop={false}
+            >
+              <source src={videoSrc} type="video/mp4" />
+            </video>
+          </VideoModalContent>
+        </VideoModalWrapper>
+      </VideoModalOverlay>
+    </>
   );
 };
 

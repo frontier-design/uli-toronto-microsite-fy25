@@ -228,6 +228,7 @@ const Stories = ({ storyId, sectionId, isLast = false }) => {
               src={image.src}
               alt={image.alt}
               caption={image.caption}
+              maxHeight={image.maxHeight}
             />
           ))}
         </div>
@@ -240,6 +241,7 @@ const Stories = ({ storyId, sectionId, isLast = false }) => {
         src={image.src}
         alt={image.alt}
         caption={image.caption}
+        maxHeight={image.maxHeight}
       />
     ));
   };

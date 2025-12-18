@@ -8,6 +8,7 @@ import DistrictCouncil from './DistrictCouncil';
 import Leadership from './Leadership';
 import Sponsorship from './Sponsorship';
 import { gsap } from '../../../hooks/useGSAP';
+import StoryImage from '../stories/StoryImage';
 
 const AtAGlanceSection = styled.section`
   width: 100%;
@@ -446,6 +447,17 @@ const AtAGlance = ({ sectionId = "at-a-glance" }) => {
                   </AtAGlanceContent>
                 </GridColumn>
               </GridRow>
+            </GridColumn>
+          </GridRow>
+          
+          <GridRow>
+            <GridColumn cols={4} mobileCols={0} />
+            <GridColumn cols={8} mobileCols={12}>
+              <StoryImage
+                src="/images/powred_people_partners.jpeg"
+                alt="Powered by People & Partners"
+                maxHeight="500px"
+              />
             </GridColumn>
           </GridRow>
         </GridContainer>

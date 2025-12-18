@@ -290,6 +290,7 @@ const ImageGrid = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
+  min-height: 100vh;
   background: ${colors.white};
   z-index: 3;
   display: flex;
@@ -314,8 +315,13 @@ const ImageGrid = styled.div`
     padding: 120px 50px;
   }
 
+  @media (max-width: 1024px) {
+    padding: 60px 40px;
+    min-height: auto;
+  }
+
   @media (max-width: 768px) {
-    padding: 40px;
+    padding: 40px 20px;
   }
 `;
 
@@ -324,15 +330,31 @@ const ImageCluster = styled.div`
   width: 100%;
   max-width: 1340px;
   height: 60%;
+  min-height: 500px;
   margin-bottom: 60px;
   overflow: visible;
+  flex-shrink: 0;
 
   @media (min-width: 1600px) {
     max-width: 1700px;
+    min-height: 600px;
+  }
+
+  @media (max-width: 1024px) {
+    min-height: 450px;
+    margin-bottom: 40px;
   }
 
   @media (max-width: 768px) {
     width: 100%;
+    min-height: 400px;
+    margin-bottom: 30px;
+    height: auto;
+  }
+
+  @media (max-width: 480px) {
+    min-height: 350px;
+    margin-bottom: 24px;
   }
 `;
 
@@ -351,12 +373,28 @@ const ImagePlaceholder = styled.div`
       width: 390px !important;
       height: 260px !important;
     }
+    @media (max-width: 1024px) {
+      width: 240px !important;
+      height: 240px !important;
+    }
+    @media (max-width: 768px) {
+      width: 180px !important;
+      height: 180px !important;
+    }
   }
 
   &.narrative-image-2 {
     @media (min-width: 1600px) {
       width: 325px !important;
       height: 325px !important;
+    }
+    @media (max-width: 1024px) {
+      width: 200px !important;
+      height: 240px !important;
+    }
+    @media (max-width: 768px) {
+      width: 150px !important;
+      height: 180px !important;
     }
   }
 
@@ -365,12 +403,28 @@ const ImagePlaceholder = styled.div`
       width: 455px !important;
       height: 286px !important;
     }
+    @media (max-width: 1024px) {
+      width: 280px !important;
+      height: 160px !important;
+    }
+    @media (max-width: 768px) {
+      width: 210px !important;
+      height: 120px !important;
+    }
   }
 
   &.narrative-image-4 {
     @media (min-width: 1600px) {
       width: 364px !important;
       height: 364px !important;
+    }
+    @media (max-width: 1024px) {
+      width: 224px !important;
+      height: 240px !important;
+    }
+    @media (max-width: 768px) {
+      width: 168px !important;
+      height: 180px !important;
     }
   }
 
@@ -379,12 +433,28 @@ const ImagePlaceholder = styled.div`
       width: 260px !important;
       height: 234px !important;
     }
+    @media (max-width: 1024px) {
+      width: 160px !important;
+      height: 144px !important;
+    }
+    @media (max-width: 768px) {
+      width: 120px !important;
+      height: 108px !important;
+    }
   }
 
   &.narrative-image-6 {
     @media (min-width: 1600px) {
       width: 416px !important;
       height: 260px !important;
+    }
+    @media (max-width: 1024px) {
+      width: 256px !important;
+      height: 160px !important;
+    }
+    @media (max-width: 768px) {
+      width: 192px !important;
+      height: 120px !important;
     }
   }
 `;
@@ -397,6 +467,10 @@ const Phase4Text = styled.p`
   text-align: center;
   max-width: 900px;
   line-height: 1.35;
+  margin-top: 0;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
 
   @media (min-width: 1600px) {
     font-size: 44px;
@@ -405,14 +479,17 @@ const Phase4Text = styled.p`
 
   @media (max-width: 1024px) {
     font-size: 30px;
+    margin-top: 20px;
   }
 
   @media (max-width: 768px) {
     font-size: 24px;
+    margin-top: 16px;
   }
 
   @media (max-width: 480px) {
     font-size: 20px;
+    margin-top: 12px;
   }
 `;
 
@@ -1578,37 +1655,37 @@ const Narrative = () => {
             ref={el => imagePlaceholdersRef.current[0] = el}
             className="narrative-image-1"
             style={{ width: '300px', height: '300px', top: '5%', left: '5%' }}
-            $bgImage="/images/narrative-stack/stack-1/nar-stack-1.jpeg"
+            $bgImage="/images/uli-stack-photos/stack_1.jpeg"
           />
           <ImagePlaceholder
             ref={el => imagePlaceholdersRef.current[1] = el}
             className="narrative-image-2"
             style={{ width: '250px', height: '300px', top: '15%', right: '35%' }}
-            $bgImage="/images/narrative-stack/stack-1/nar-stack-2.jpeg"
+            $bgImage="/images/uli-stack-photos/stack_2.jpeg"
           />
           <ImagePlaceholder
             ref={el => imagePlaceholdersRef.current[2] = el}
             className="narrative-image-3"
             style={{ width: '350px', height: '200px', top: '45%', left: '18%' }}
-            $bgImage="/images/narrative-stack/stack-1/nar-stack-3.jpeg"
+            $bgImage="/images/uli-stack-photos/stack_3.jpeg"
           />
           <ImagePlaceholder
             ref={el => imagePlaceholdersRef.current[3] = el}
             className="narrative-image-4"
             style={{ width: '280px', height: '300px', top: '0%', right: '8%' }}
-            $bgImage="/images/narrative-stack/stack-1/nar-stack-4.jpeg"
+            $bgImage="/images/uli-stack-photos/stack_4.jpeg"
           />
           <ImagePlaceholder
             ref={el => imagePlaceholdersRef.current[4] = el}
             className="narrative-image-5"
             style={{ width: '200px', height: '200px', bottom: '70%', left: '40%' }}
-            $bgImage="/images/narrative-stack/stack-1/nar-stack-5.jpeg"
+            $bgImage="/images/uli-stack-photos/stack_5.jpeg"
           />
           <ImagePlaceholder
             ref={el => imagePlaceholdersRef.current[5] = el}
             className="narrative-image-6"
             style={{ width: '320px', height: '200px', bottom: '0%', right: '15%' }}
-            $bgImage="/images/narrative-stack/stack-1/nar-stack-6.jpeg"
+            $bgImage="/images/uli-stack-photos/stack_6.jpeg"
           />
         </ImageCluster>
         
