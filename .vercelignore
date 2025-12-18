@@ -1,8 +1,6 @@
 # Large video files that should not be deployed
 public/images/narrative-video.mp4
 public/videos/narrative-video.mp4
-public/videos/toronto-vid-1.webm
-public/videos/toronto-vid-2.webm
 
 # Exclude source asset videos (large files)
 src/assets/videos/
