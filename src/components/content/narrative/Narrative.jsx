@@ -3,9 +3,11 @@ import styled from 'styled-components';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { colors } from '../../../styles';
-import torontoVid from '/videos/toronto-vid-1.webm';
-import torontoVid2 from '/videos/toronto-vid-2.webm';
 import uliLogo from '../../../assets/uli-logo.png';
+
+// Use URL paths for videos to avoid bundling large files
+const torontoVid = '/videos/toronto-vid-1.webm';
+const torontoVid2 = '/videos/toronto-vid-2.webm';
 
 gsap.registerPlugin(ScrollTrigger);
 
