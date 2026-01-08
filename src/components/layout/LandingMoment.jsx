@@ -646,19 +646,33 @@ const LandingMoment = () => {
     }
   };
 
-  // Auto-play video when modal opens
+  // Auto-play video when modal opens (muted, user can unmute via controls)
   useEffect(() => {
     if (isVideoModalOpen && videoModalRef.current) {
+      const video = videoModalRef.current;
+      // Ensure video is muted before attempting to play
+      video.muted = true;
+      
       // Small delay to ensure modal is fully rendered
       const timer = setTimeout(() => {
-        if (videoModalRef.current) {
-          videoModalRef.current.play().catch(err => {
-            console.log('Video autoplay failed:', err);
-          });
+        if (video && isVideoModalOpen) {
+          const playPromise = video.play();
+          if (playPromise !== undefined) {
+            playPromise.catch(err => {
+              console.log('Video autoplay failed:', err);
+            });
+          }
         }
       }, 100);
       
-      return () => clearTimeout(timer);
+      return () => {
+        clearTimeout(timer);
+        // Pause video when modal closes
+        if (video) {
+          video.pause();
+          video.currentTime = 0;
+        }
+      };
     }
   }, [isVideoModalOpen]);
 
@@ -1002,9 +1016,8 @@ const LandingMoment = () => {
             <video
               ref={videoModalRef}
               controls
-              autoPlay
               playsInline
-              muted={false}
+              muted={true}
               loop={false}
             >
               <source src={videoSrc} type="video/mp4" />
