@@ -178,6 +178,22 @@
       "content": "In FY25, ULI Toronto maintained a strong focus on climate and resiliency, integrating sustainability across our programming. Key events tackled timely issues such as Toronto's new Building Emissions Performance Standards (BEPS), the economics of geo-exchange and solar adoption, and the future of net-zero buildings. Signature sessions like Carbon Attack and The New Green Math explored how financial tools can accelerate climate action. Member tours of mass timber and net-zero projects brought sustainable design to life. While engagement on climate content has softened, our commitment remains firm: to lead conversations that align market realities with climate-smart solutions.",
       "pullQuote": "Our commitment remains firm: to lead conversations that align market realities with climate-smart solutions.",
       "pullQuoteAuthor": "ULI Toronto",
+      "images": [
+        {
+          "src": "/images/new-photos/new-climate-resiliency-1.png",
+          "alt": "Climate & Resiliency",
+          "caption": null,
+          "position": "after",
+          "layout": "two-column"
+        },
+        {
+          "src": "/images/new-photos/new-climate-resiliency-2.jpg",
+          "alt": "Climate & Resiliency",
+          "caption": null,
+          "position": "after",
+          "layout": "two-column"
+        }
+      ],
       "interactiveText": [
         {
           "highlightedText": "Carbon Attack",

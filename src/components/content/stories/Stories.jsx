@@ -283,7 +283,7 @@ const Stories = ({ storyId, sectionId, isLast = false }) => {
   const shouldShowFullWidthImage = story && storiesWithFullWidthImages.includes(story.id);
   
   // Only show parallax images for specific stories
-  const storiesWithParallaxImages = ['climate-resiliency'];
+  const storiesWithParallaxImages = [];
   const shouldShowParallaxImages = story && storiesWithParallaxImages.includes(story.id);
   
   // Only show video gallery for specific stories (examples)
