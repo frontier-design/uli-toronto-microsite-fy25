@@ -9,6 +9,7 @@ import Leadership from './Leadership';
 import Sponsorship from './Sponsorship';
 import { gsap } from '../../../hooks/useGSAP';
 import StoryImage from '../stories/StoryImage';
+import VideoEmbed from '../media/VideoEmbed';
 
 const AtAGlanceSection = styled.section`
   width: 100%;
@@ -453,10 +454,9 @@ const AtAGlance = ({ sectionId = "at-a-glance" }) => {
           <GridRow>
             <GridColumn cols={4} mobileCols={0} />
             <GridColumn cols={8} mobileCols={12}>
-              <StoryImage
-                src="/images/powred_people_partners.jpeg"
-                alt="Powered by People & Partners"
-                maxHeight="500px"
+              <VideoEmbed 
+                embedHtml={`<iframe width="560" height="315" src="https://www.youtube.com/embed/NLlo82E479E?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&showinfo=0&loop=1&playlist=NLlo82E479E" title="ULI Toronto Membership Video 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`}
+                videoTitle="ULI Toronto <br /> Membership <br /> Video 2024"
               />
             </GridColumn>
           </GridRow>

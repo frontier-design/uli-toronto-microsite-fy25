@@ -3,11 +3,11 @@
     {
       "id": "public-sector-convening",
       "title": "Public-Sector Convening",
-      "image": "/images/photos/public-sector.jpeg",
+      "image": "/images/uli-stack-photos/stack_1.jpeg",
       "content": "ULI Toronto strengthened its role as a trusted convener of public and private sector leaders in FY25, expanding on over a decade of success with our flagship Meet the Chief Planners Dinner—now drawing over 500 attendees and 50 senior public officials. This commitment deepened with the launch of our Members-Only Public Sector Breakfast Series, a new monthly forum that brought ULI members together with influential civic leaders for candid dialogue on key urban issues. We also hosted two exclusive roundtables with the City of Toronto, reinforcing our role as a neutral platform for informed, solutions-focused exchange ",
       "images": [
         {
-          "src": "/images/photos/public-sector.jpeg",
+          "src": "/images/uli-stack-photos/stack_1.jpeg",
           "alt": "Public Sector Convening",
           "caption": null,
           "position": "after"
@@ -245,18 +245,10 @@
       "content": "In FY25, ULI Toronto's vibrant calendar of networking events fostered deeper connections across the real estate and city-building community. From the record-breaking 12th Annual Summer Social to the Winter Social and Ski Day, our signature gatherings brought members together in dynamic, informal settings. The WLI Women-Led City Building Mixer and Book Club Without the Books created space for meaningful dialogue and mentorship among women leaders. Playful events like Networking Bingo and City Building Trivia Night added energy and accessibility to our programming. Together, these experiences strengthened professional networks and reinforced the value of belonging to ULI Toronto.",
       "images": [
         {
-          "src": "/images/photos/indus-1.jpeg",
-          "alt": "Industry Networking Event 1",
+          "src": "/images/new-photos/new-industry-networking.jpg",
+          "alt": "Industry Networking",
           "caption": null,
-          "position": "after",
-          "layout": "two-column"
-        },
-        {
-          "src": "/images/photos/indus-2.jpg",
-          "alt": "Industry Networking Event 2",
-          "caption": null,
-          "position": "after",
-          "layout": "two-column"
+          "position": "after"
         }
       ],
       "interactiveText": [

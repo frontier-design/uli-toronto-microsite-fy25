@@ -97,8 +97,8 @@ const LegendItem = styled.div`
 `;
 
 const LegendDot = styled.div`
-  width: 8px;
-  height: 8px;
+  width: 17px;
+  aspect-ratio: 1/1;
   border-radius: 50%;
   background-color: ${props => props.$color};
   margin-right: 8px;
