@@ -568,7 +568,7 @@ const DistrictCouncil = ({ sectionId = "at-a-glance-district-council" }) => {
                     <FaMap />
                   </StatIcon>
                   <StatContent>
-                    <StatNumber>67</StatNumber>
+                    <StatNumber>77</StatNumber>
                     <StatLabel>Events in FY24</StatLabel>
                   </StatContent>
                 </StatItem>
@@ -578,7 +578,7 @@ const DistrictCouncil = ({ sectionId = "at-a-glance-district-council" }) => {
                     <IoChatbubblesOutline />
                   </StatIcon>
                   <StatContent>
-                    <StatNumber>140</StatNumber>
+                    <StatNumber>130</StatNumber>
                     <StatLabel>Average event attendance for 26 virtual and 41 in-person events</StatLabel>
                   </StatContent>
                 </StatItem>
@@ -588,8 +588,8 @@ const DistrictCouncil = ({ sectionId = "at-a-glance-district-council" }) => {
                     <FaMicrophone />
                   </StatIcon>
                   <StatContent>
-                    <StatNumber>343</StatNumber>
-                    <StatLabel>Total speakers (48% female and 34% BIPOC)</StatLabel>
+                    <StatNumber>413</StatNumber>
+                    <StatLabel>Total speakers (45% female and 31% BIPOC)</StatLabel>
                   </StatContent>
                 </StatItem>
                 
@@ -598,7 +598,7 @@ const DistrictCouncil = ({ sectionId = "at-a-glance-district-council" }) => {
                     <FaHandshake />
                   </StatIcon>
                   <StatContent>
-                    <StatNumber>237</StatNumber>
+                    <StatNumber>287</StatNumber>
                     <StatLabel>Volunteer committee members</StatLabel>
                   </StatContent>
                 </StatItem>

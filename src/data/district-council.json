@@ -27,10 +27,10 @@
     ]
   },
   "eventAttendance": [
-    { "council": "Toronto", "attendance": 9382 },
-    { "council": "Austin", "attendance": 5452 },
-    { "council": "Nashville", "attendance": 5428 },
-    { "council": "San Francisco", "attendance": 4967 },
-    { "council": "Philadelphia", "attendance": 4047 }
+    { "council": "Toronto", "attendance": 9640 },
+    { "council": "Nashville", "attendance": 6441 },
+    { "council": "Austin", "attendance": 5599 },
+    { "council": "San Francisco", "attendance": 4637 },
+    { "council": "Los Angeles", "attendance": 4425 }
   ]
 }
