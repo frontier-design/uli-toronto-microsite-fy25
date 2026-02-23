@@ -1,28 +1,26 @@
 {
   "membersBySector": [
-    { "label": "Development", "value": 21, "color": "#4C763B" },
-    { "label": "Financial", "value": 14, "color": "#6A9551" },
-    { "label": "Urban Planner", "value": 13, "color": "#7FAE67" },
-    { "label": "Academic", "value": 11, "color": "#8EC27D" },
-    { "label": "Architecture and Design", "value": 10, "color": "#2C4D7F" },
-    { "label": "Consultant", "value": 7, "color": "#3D5A9E" },
-    { "label": "Other", "value": 5, "color": "#4A6BA8" },
-    { "label": "Government", "value": 5, "color": "#5A81C5" },
-    { "label": "Communications Professionals", "value": 4, "color": "#6888B8" },
-    { "label": "Law Firm", "value": 3, "color": "#595177" },
+    { "label": "Development", "value": 24, "color": "#4C763B" },
+    { "label": "Urban Planner", "value": 16, "color": "#7FAE67" },
+    { "label": "Consultant", "value": 10, "color": "#3D5A9E" },
+    { "label": "Architecture and Design", "value": 12, "color": "#2C4D7F" },
+    { "label": "Financial", "value": 8, "color": "#6A9551" },
+    { "label": "Government", "value": 3, "color": "#5A81C5" },
+    { "label": "Engineering", "value": 3, "color": "#8B84A5" },
+    { "label": "Communications Professionals", "value": 3, "color": "#6888B8" },
+    { "label": "Law Firm", "value": 4, "color": "#595177" },
     { "label": "Corporate Executive", "value": 3, "color": "#726A8E" },
-    { "label": "Engineering", "value": 2, "color": "#8B84A5" },
-    { "label": "Not for Profit", "value": 1, "color": "#A59DBC" }
+    { "label": "Other", "value": 10, "color": "#4A6BA8" }
   ],
   "membershipTypes": {
-    "total": 2119,
+    "total": 2109,
     "breakdown": [
-      { "name": "Private", "value": 50 },
-      { "name": "Under 35", "value": 19 },
+      { "name": "Private", "value": 46 },
+      { "name": "Under 35", "value": 27 },
       { "name": "Public", "value": 15 },
       { "name": "Student", "value": 8 },
-      { "name": "Full Public", "value": 5 },
-      { "name": "Full Retired", "value": 2 },
+      { "name": "Full Public", "value": 2 },
+      { "name": "Full Retired", "value": 1 },
       { "name": "Full Under 35", "value": 1 }
     ]
   },
