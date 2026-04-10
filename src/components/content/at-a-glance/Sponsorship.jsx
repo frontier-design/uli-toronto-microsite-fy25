@@ -2,6 +2,13 @@ import styled from 'styled-components';
 import Marquee from 'react-fast-marquee';
 import { colors, GridContainer, GridRow, GridColumn } from '../../../styles';
 import sponsorsData from '../../../data/sponsors.json';
+import arcadisLogo from '../../../assets/arcadis.svg';
+import ellisdonLogo from '../../../assets/ellisdon.svg';
+
+const SPONSOR_LOGO_OVERRIDES = {
+  'Diamond Sponsor 1': arcadisLogo,
+  'Diamond Sponsor 3': ellisdonLogo,
+};
 
 const SponsorshipSection = styled.section`
   width: 100%;
@@ -150,7 +157,7 @@ const Sponsorship = ({ sectionId = "at-a-glance-sponsorship" }) => {
                   aria-label={`Visit ${sponsor.name} website`}
                 >
                   <SponsorLogo
-                    src={sponsor.logo}
+                    src={SPONSOR_LOGO_OVERRIDES[sponsor.name] ?? sponsor.logo}
                     alt={sponsor.name}
                     loading="lazy"
                   />
