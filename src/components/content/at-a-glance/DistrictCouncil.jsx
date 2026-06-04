@@ -569,7 +569,7 @@ const DistrictCouncil = ({ sectionId = "at-a-glance-district-council" }) => {
                   </StatIcon>
                   <StatContent>
                     <StatNumber>67</StatNumber>
-                    <StatLabel>Events in FY24</StatLabel>
+                    <StatLabel>Events in FY25</StatLabel>
                   </StatContent>
                 </StatItem>
                 
